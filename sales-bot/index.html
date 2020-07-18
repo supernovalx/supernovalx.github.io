@@ -39,9 +39,9 @@
     const urlParams = new URLSearchParams(queryString);
     WebChat.default.init({
         selector: "#webchat",
-        initPayload: "hi",
+        initPayload: "/greet",
         customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-        socketUrl: "https://" + urlParams.get('ngrok') + ".ngrok.io",
+        socketUrl: "http://lalalogy.com:5005",
         profileAvatar: "https://cdn3.iconfinder.com/data/icons/chat-bot-emoji-blue-filled-color/300/14134081Untitled-3-512.png",
         socketPath: "/socket.io/",
         title: "LaLa bot",
