@@ -22,8 +22,28 @@
         docViewer: true,
         subtitle: "Your personal assistant",
         showFullScreenButton: true,
+        onSocketEvent:{
+  'bot_uttered': () => bot_uttered(),
+  'connect': () => console.log('connection established'),
+  'disconnect': () => console.log('disconnectdisconnect')(),
+},
         params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
     })
+
+    let timeoutHandle = 0;
+    function bot_uttered()
+    {
+        window.clearTimeout(timeoutHandle);
+
+        timeoutHandle = window.setTimeout(session_expired, 300000);
+    }
+
+    function session_expired()
+    {
+        alert('Phiên làm việc đã hết hạn!');
+        sessionStorage.clear();
+        location.reload();
+    }
     </script>
 </body>
 </html>
