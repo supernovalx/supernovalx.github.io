@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <title>Lalalogy chat bot</title>
         <style>
             .rw-header {
@@ -29,9 +30,56 @@
                 50%{background-position:52% 100%}
                 100%{background-position:49% 0%}
             }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                height: 100vh;
+                margin: 0;
+                padding: auto;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 3em;
+                font-family: 'Open Sans Condensed', sans-serif;
+                color: white;
+
+                background: linear-gradient(180deg, #7ee1ff, #e365ff);
+                background-size: 400% 400%;
+
+                -webkit-animation: background 30s ease infinite;
+                -moz-animation: background 30s ease infinite;
+                animation: background 30s ease infinite;
+            }
+
+            @-webkit-keyframes background {
+                0%{background-position:46% 0%}
+                50%{background-position:55% 100%}
+                100%{background-position:46% 0%}
+            }
+            @-moz-keyframes background {
+                0%{background-position:46% 0%}
+                50%{background-position:55% 100%}
+                100%{background-position:46% 0%}
+            }
+            @keyframes background {
+                0%{background-position:46% 0%}
+                50%{background-position:55% 100%}
+                100%{background-position:46% 0%}
+            }
+
+            .container span {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+            }
     </style>
 </head>
 <body>
+    <div class="container">
+        LALA THE CHATBOT
+    </div>
     <div id="webchat"></div>
     <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
     <script>
