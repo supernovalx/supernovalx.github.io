@@ -6,8 +6,8 @@ nav {
   position: fixed;
   padding-top: 28px;
   width: 100%;
-  -webkit-transition: background-color 0.5s ease, padding 0.5s ease-out;
-  transition: background-color 0.5s ease, padding 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out, padding 0.5s ease-out;
+  transition: background-color 0.5s ease-out, padding 0.5s ease-out;
 }
 
 nav div {
@@ -25,10 +25,10 @@ nav div .logo {
   height: 65px;
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
-  -webkit-transition: -webkit-filter 0.5s ease;
-  transition: -webkit-filter 0.5s ease;
-  transition: filter 0.5s ease;
-  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+  -webkit-transition: -webkit-filter 0.5s ease-out;
+  transition: -webkit-filter 0.5s ease-out;
+  transition: filter 0.5s ease-out;
+  transition: filter 0.5s ease-out, -webkit-filter 0.5s ease-out;
 }
 
 nav div ul {
@@ -54,8 +54,8 @@ nav div ul li svg {
 }
 
 nav div ul li svg .a {
-  -webkit-transition: fill 0.5s ease;
-  transition: fill 0.5s ease;
+  -webkit-transition: fill 0.5s ease-out;
+  transition: fill 0.5s ease-out;
 }
 
 nav div ul .facebook {
@@ -104,6 +104,8 @@ nav div ul .lang-en {
   background-color: #fff;
   padding-bottom: 29px;
   border-bottom: 3px solid #6F55D9;
+  -webkit-box-shadow: 0px 1px 0px 0px #707070;
+          box-shadow: 0px 1px 0px 0px #707070;
 }
 
 .scrolling-active li a {
@@ -121,12 +123,5 @@ nav div ul .lang-en {
 .scrolling-active .logo {
   -webkit-filter: none;
           filter: none;
-}
-
-.scrolling-active::after {
-  display: block;
-  content: "";
-  height: 50px;
-  background-color: #777;
 }
 /*# sourceMappingURL=main.css.map */
