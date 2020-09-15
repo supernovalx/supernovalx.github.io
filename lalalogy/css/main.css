@@ -1,9 +1,11 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
   padding-top: 28px;
   width: 100%;
   -webkit-transition: background-color 0.5s ease-out, padding 0.5s ease-out;
@@ -29,6 +31,10 @@ nav div .logo {
   transition: -webkit-filter 0.5s ease-out;
   transition: filter 0.5s ease-out;
   transition: filter 0.5s ease-out, -webkit-filter 0.5s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav div ul {
@@ -83,45 +89,191 @@ nav div ul .lang-btn {
 nav div ul .lang-vi {
   border-radius: 20px 0 0 20px;
   background-color: #fff;
-  color: #5733D1;
+  color: #5733d1;
 }
 
 nav div ul .lang-en {
   border-radius: 0 20px 20px 0;
-  background-color: #6F55D9;
+  background-color: #6f55d9;
   color: #fff;
   padding-left: 11px;
-  margin-left: -4px;
+  margin-left: -5px;
 }
 
 #background {
   position: absolute;
-  z-index: -1;
+  top: 0;
+  z-index: -20;
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#background-elements {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px) scale(1);
+            transform: translate(0, 0px) scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 20px) scale(0.98);
+            transform: translate(0, 20px) scale(0.98);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px) scale(1);
+            transform: translate(0, 0px) scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px) scale(1);
+            transform: translate(0, 0px) scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 20px) scale(0.98);
+            transform: translate(0, 20px) scale(0.98);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px) scale(1);
+            transform: translate(0, 0px) scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+#robot {
+  position: absolute;
+  z-index: -5;
+  left: 50%;
+  top: 11vw;
+  width: 32%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .scrolling-active {
   background-color: #fff;
-  padding-bottom: 29px;
-  border-bottom: 3px solid #6F55D9;
+  padding-bottom: 21px;
+  padding-top: 20px;
+  border-bottom: 3px solid #6f55d9;
   -webkit-box-shadow: 0px 1px 0px 0px #707070;
           box-shadow: 0px 1px 0px 0px #707070;
 }
 
 .scrolling-active li a {
-  color: #6F55D9;
+  color: #6f55d9;
 }
 
 .scrolling-active .lang-btn {
-  border: 1px solid #6F55D9;
+  border: 1px solid #6f55d9;
 }
 
 .scrolling-active svg .a {
-  fill: #6F55D9;
+  fill: #6f55d9;
 }
 
 .scrolling-active .logo {
   -webkit-filter: none;
           filter: none;
+}
+
+.call-to-action {
+  top: 19vw;
+  position: absolute;
+  left: calc((100vw - min(1088px, 95vw)) / 2);
+  z-index: -1;
+}
+
+.call-to-action h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: -0.88px;
+}
+
+.call-to-action .chat-with-me {
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #2D2D2D;
+  font-size: 22px;
+  border-radius: 30px;
+  border-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 59px;
+  width: 289px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-out, color .3s ease-out;
+  transition: background-color 0.3s ease-out, color .3s ease-out;
+}
+
+.call-to-action .chat-with-me:hover {
+  background-color: #6f55d9;
+  color: #fff;
+}
+
+#scroll-down {
+  position: absolute;
+  width: 49px;
+  left: calc(50% - 49px / 2);
+  top: calc(50vw - 49px - 28px);
+}
+
+#scroll-down:hover circle {
+  fill: #6f55d9;
+}
+
+.introduction {
+  margin-top: calc(50vw + 68.5px);
+}
+
+.introduction .we-are {
+  color: #6f55d9;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -.96px;
+  text-align: center;
+}
+
+.introduction p {
+  text-align: center;
+  color: #2D2D2D;
+  font-size: 16px;
+  line-height: 30px;
 }
 /*# sourceMappingURL=main.css.map */
