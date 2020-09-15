@@ -1,0 +1,130 @@
+$light-purple: #6F55D9;
+$transition-duration: .5s;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    position: fixed;
+    padding-top: 28px;
+    width: 100%;
+    transition: background-color $transition-duration ease, padding $transition-duration ease-out;
+    
+
+    div {
+        display:flex;
+        justify-content: space-between;
+        width: calc(min(1088px, 95vw));
+        margin: 0 auto;
+
+        .logo {
+            height: 65px;
+            filter: brightness(0) invert(1);
+            transition: filter $transition-duration ease;
+        }
+        
+        ul{
+            color: #fff;
+            text-transform: capitalize;
+            font-weight: lighter;
+
+            li {
+                display: inline-block;
+                margin-left: 29px;
+            }
+            
+            // Links
+            li a {
+                text-decoration: none;
+                color: #fff;
+            }
+            
+            // Social buttons
+            li svg {
+                height: 26px;
+                position: relative;
+                top: 5px;
+            }
+            
+            li svg .a {
+                transition: fill $transition-duration ease;
+                
+            }
+
+            .facebook {
+                margin-left: 32px;
+            }
+
+            .instagram {
+                margin-left: 43px;
+            }
+
+            .twitter {
+                margin-left: 40px;
+            }
+
+            .lang-btn {
+                box-sizing: border-box;
+                display: inline-block;
+                height: 38px;
+                width: 50px;
+                padding-top: 10px;
+                padding-left: 19px;;
+            }
+
+            .lang-vi {
+                border-radius: 20px 0 0 20px;
+                background-color: #fff;
+                color: #5733D1;
+                
+            }
+
+            .lang-en {
+                border-radius: 0 20px 20px 0;
+                background-color: $light-purple;
+                color: #fff;
+                padding-left: 11px;
+                margin-left: -4px;
+            }
+        }
+    }
+    
+}
+
+#background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.scrolling-active {
+    background-color: #fff;
+    padding-bottom: 29px;
+    border-bottom: 3px solid $light-purple;
+
+    li a {
+        color:$light-purple;
+    }
+
+    .lang-btn {
+        border:1px solid $light-purple;
+    }
+
+    svg .a{
+        fill: $light-purple;
+    }
+
+    .logo {
+        filter: none;
+    }
+
+    
+}
+
+.scrolling-active::after {
+    display: block;
+    content: "";
+    height: 50px;
+    background-color: #777;
+}

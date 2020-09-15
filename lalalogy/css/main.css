@@ -1,0 +1,132 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  position: fixed;
+  padding-top: 28px;
+  width: 100%;
+  -webkit-transition: background-color 0.5s ease, padding 0.5s ease-out;
+  transition: background-color 0.5s ease, padding 0.5s ease-out;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(min(1088px, 95vw));
+  margin: 0 auto;
+}
+
+nav div .logo {
+  height: 65px;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+
+nav div ul {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+
+nav div ul li {
+  display: inline-block;
+  margin-left: 29px;
+}
+
+nav div ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav div ul li svg {
+  height: 26px;
+  position: relative;
+  top: 5px;
+}
+
+nav div ul li svg .a {
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+
+nav div ul .facebook {
+  margin-left: 32px;
+}
+
+nav div ul .instagram {
+  margin-left: 43px;
+}
+
+nav div ul .twitter {
+  margin-left: 40px;
+}
+
+nav div ul .lang-btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  height: 38px;
+  width: 50px;
+  padding-top: 10px;
+  padding-left: 19px;
+}
+
+nav div ul .lang-vi {
+  border-radius: 20px 0 0 20px;
+  background-color: #fff;
+  color: #5733D1;
+}
+
+nav div ul .lang-en {
+  border-radius: 0 20px 20px 0;
+  background-color: #6F55D9;
+  color: #fff;
+  padding-left: 11px;
+  margin-left: -4px;
+}
+
+#background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.scrolling-active {
+  background-color: #fff;
+  padding-bottom: 29px;
+  border-bottom: 3px solid #6F55D9;
+}
+
+.scrolling-active li a {
+  color: #6F55D9;
+}
+
+.scrolling-active .lang-btn {
+  border: 1px solid #6F55D9;
+}
+
+.scrolling-active svg .a {
+  fill: #6F55D9;
+}
+
+.scrolling-active .logo {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.scrolling-active::after {
+  display: block;
+  content: "";
+  height: 50px;
+  background-color: #777;
+}
+/*# sourceMappingURL=main.css.map */
