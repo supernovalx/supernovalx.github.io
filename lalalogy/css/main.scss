@@ -15,6 +15,7 @@ body {
 
 nav {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   padding-top: 28px;
@@ -366,18 +367,22 @@ nav {
     margin: 0 auto;
     margin-top: 318px;
 
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
     .mailstanding {
         width: 283px;
         position: absolute;
         top: -215px;
         left: 58px;
-        z-index: -1;
+        z-index: -10;
     }
 
     .mailbox {
         display: block;
         position: relative;
-        z-index: -2;
+        z-index: -20;
         width: 100%;
         height: 206px;
     }
@@ -395,7 +400,6 @@ nav {
 
     form {
         position: absolute;
-        z-index: -1;
         top: 111px;
         right: 53px;
 
@@ -408,7 +412,13 @@ nav {
             font-size: 16px;
             color: #fff;
             padding-left: 27px;
+
+            &::placeholder{
+                color: #fff;
+            }
         }
+
+        
 
         button {
             width: 117px;
