@@ -2,6 +2,20 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.logo {
+  height: 65px;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  -webkit-transition: -webkit-filter 0.5s ease-out;
+  transition: -webkit-filter 0.5s ease-out;
+  transition: filter 0.5s ease-out;
+  transition: filter 0.5s ease-out, -webkit-filter 0.5s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -21,20 +35,6 @@ nav div {
           justify-content: space-between;
   width: calc(min(1088px, 95vw));
   margin: 0 auto;
-}
-
-nav div .logo {
-  height: 65px;
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-  -webkit-transition: -webkit-filter 0.5s ease-out;
-  transition: -webkit-filter 0.5s ease-out;
-  transition: filter 0.5s ease-out;
-  transition: filter 0.5s ease-out, -webkit-filter 0.5s ease-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 nav div ul {
@@ -84,6 +84,7 @@ nav div ul .lang-btn {
   width: 50px;
   padding-top: 10px;
   padding-left: 19px;
+  font-weight: 400;
 }
 
 nav div ul .lang-vi {
@@ -113,8 +114,9 @@ nav div ul .lang-en {
 
 #background-elements {
   position: absolute;
-  top: 0;
-  width: 100%;
+  top: 5vw;
+  left: 12vw;
+  width: calc(100vw - 13vw);
   z-index: -10;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -228,8 +230,9 @@ nav div ul .lang-en {
 .call-to-action .chat-with-me {
   background-color: #fff;
   text-transform: uppercase;
-  color: #2D2D2D;
+  color: #2d2d2d;
   font-size: 22px;
+  font-weight: 400;
   border-radius: 30px;
   border-style: none;
   -webkit-box-sizing: border-box;
@@ -238,8 +241,8 @@ nav div ul .lang-en {
   width: 289px;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease-out, color .3s ease-out;
-  transition: background-color 0.3s ease-out, color .3s ease-out;
+  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
 .call-to-action .chat-with-me:hover {
@@ -249,6 +252,8 @@ nav div ul .lang-en {
 
 #scroll-down {
   position: absolute;
+  z-index: -1;
+  cursor: pointer;
   width: 49px;
   left: calc(50% - 49px / 2);
   top: calc(50vw - 49px - 28px);
@@ -262,18 +267,250 @@ nav div ul .lang-en {
   margin-top: calc(50vw + 68.5px);
 }
 
+.introduction .robo-head {
+  position: absolute;
+  top: calc(50vw + 83.5px);
+  right: 39.27px;
+  width: 112.73px;
+  z-index: -1;
+}
+
 .introduction .we-are {
+  margin-top: 0;
+  margin-bottom: 0.3em;
   color: #6f55d9;
   font-size: 60px;
   font-weight: bold;
-  letter-spacing: -.96px;
+  letter-spacing: -0.96px;
   text-align: center;
 }
 
 .introduction p {
   text-align: center;
-  color: #2D2D2D;
+  color: #2d2d2d;
   font-size: 16px;
   line-height: 30px;
+}
+
+.product-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: calc(min(1088px, 95vw));
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.product-cards img {
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.product-cards h2 {
+  margin-top: 224.4px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.product-cards p {
+  margin-top: 14.7px;
+}
+
+.product-cards h2,
+.product-cards p {
+  margin-left: 35px;
+  color: #434343;
+}
+
+.product-cards .card-chatbot {
+  width: 316px;
+  height: 376px;
+}
+
+.product-cards .card-chatbot h2 {
+  color: #588aff;
+}
+
+.product-cards .card-mobileapp {
+  width: 293px;
+  height: 375px;
+}
+
+.product-cards .card-mobileapp h2 {
+  color: #6f55d9;
+}
+
+.product-cards .card-games {
+  width: 293px;
+  height: 384px;
+}
+
+.product-cards .card-games h2 {
+  color: #4cd6f2;
+}
+
+.posts {
+  color: #2d2d2d;
+  width: calc(min(1088px, 95vw));
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.posts h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.posts .post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.posts .post-container .post {
+  width: 259px;
+}
+
+.posts .post-container .post img {
+  width: 29px;
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  z-index: -1;
+}
+
+.posts .post-container .post span {
+  font-size: 14px;
+}
+
+.posts .post-container .post h3 {
+  font-weight: 500;
+  margin: 13.5px 0 19px 0;
+}
+
+.posts .post-container .post p {
+  line-height: 1.3;
+}
+
+.posts button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 117px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #6f55d9;
+  display: block;
+  margin: 25px 0 0 auto;
+  letter-spacing: -0.29px;
+}
+
+.stay-in-touch {
+  position: relative;
+  width: calc(min(1088px, 95vw));
+  margin: 0 auto;
+  margin-top: 318px;
+}
+
+.stay-in-touch .mailstanding {
+  width: 283px;
+  position: absolute;
+  top: -215px;
+  left: 58px;
+  z-index: -1;
+}
+
+.stay-in-touch .mailbox {
+  display: block;
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 206px;
+}
+
+.stay-in-touch h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  z-index: -1;
+  top: 29px;
+  right: 120px;
+  margin: 0;
+}
+
+.stay-in-touch form {
+  position: absolute;
+  z-index: -1;
+  top: 111px;
+  right: 53px;
+}
+
+.stay-in-touch form input {
+  width: 272px;
+  height: 59px;
+  border: none;
+  border-radius: 50px;
+  background-color: #FFFFFF37;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 27px;
+}
+
+.stay-in-touch form button {
+  width: 117px;
+  height: 60px;
+  border: none;
+  border-radius: 45px;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+footer {
+  height: 106px;
+  position: relative;
+  margin-top: 159.5px;
+  background-image: url("/lalalogy/images/footer.png");
+  background-size: cover;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: calc(min(1088px, 95vw));
+  margin: 0 auto;
+}
+
+footer .container p {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
