@@ -1,5 +1,6 @@
 $light-purple: #6f55d9;
 $light-black: #2d2d2d;
+$hover-color: #588aff;
 $transition-duration: 0.5s;
 $content-width: calc(min(1088px, 95vw));
 $call-to-action-left: calc((100vw - min(1088px, 95vw)) / 2);
@@ -11,6 +12,10 @@ $call-to-action-left: calc((100vw - min(1088px, 95vw)) / 2);
 .noselect {
     user-select: none;
     pointer-events: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 body {
@@ -49,8 +54,8 @@ nav {
             text-transform: capitalize;
             font-weight: lighter;
             list-style: none;
-            align-items: baseline;
             display: flex;
+            align-items: baseline;
 
             li {
                 margin-left: 29px;
@@ -60,13 +65,17 @@ nav {
             li a {
                 text-decoration: none;
                 color: #fff;
+                transition: all $transition-duration ease;
+
+                &:hover {
+                    color: $hover-color;
+                }
             }
 
             // Social buttons
             li svg {
-                height: 26px;
                 position: relative;
-                top: 5px;
+                bottom: -6px;
             }
 
             li svg .a {
@@ -74,15 +83,15 @@ nav {
             }
 
             .facebook {
-                margin-left: 32px;
+                margin-left: 34.5px;
             }
 
             .instagram {
-                margin-left: 43px;
+                margin-left: 29.6px;
             }
 
             .twitter {
-                margin-left: 40px;
+                margin-left: 27.4px;
             }
 
             .lang-btn {
@@ -127,7 +136,7 @@ nav {
             color: #fff;
         }
 
-        svg .a {
+        svg path {
             fill: $light-purple;
         }
 
@@ -142,13 +151,15 @@ nav {
     top: 0;
     z-index: -20;
     width: 100%;
+    height: 100vh;
 }
 
 #background-elements {
     position: absolute;
-    top: 5vw;
+    top: 5vh;
     left: 12vw;
     width: calc(100vw - 13vw);
+    height: 95vh;
     z-index: -10;
     animation-name: floating;
     animation-duration: 3s;
@@ -176,17 +187,17 @@ nav {
     position: absolute;
     z-index: -5;
     left: 50%;
-    top: 11vw;
+    top: 30vh;
     width: 32%;
 }
 
 .call-to-action {
     position: absolute;
-    top: 19vw;
+    top: 38.1vh;
     left: $call-to-action-left;
 
     h1 {
-        font-size: rem(55px);
+        font-size: calc(max(min(#{rem(55px)}, 5vw), #{rem(30px)}));
         font-weight: bold;
         color: #fff;
         letter-spacing: -0.88px;
@@ -196,19 +207,19 @@ nav {
         background-color: #fff;
         text-transform: uppercase;
         color: $light-black;
-        font-size: rem(22px);
+        font-size: calc(max(min(#{rem(22px)}, 2.1vw), #{rem(16px)}));
         font-weight: 400;
         border-radius: 30px;
         border-style: none;
         box-sizing: border-box;
-        height: 59px;
-        width: 289px;
+        height: calc(min(59px, 25vw * 0.2041));
+        width: calc(min(289px, 25vw));
         text-align: center;
         cursor: pointer;
-        transition: background-color 0.3s ease-out, color 0.3s ease-out;
+        transition: all 0.2s ease-out;
 
         &:hover {
-            background-color: $light-purple;
+            background-color: $hover-color;
             color: #fff;
         }
     }
@@ -219,22 +230,26 @@ nav {
     cursor: pointer;
     width: 49px;
     left: calc(50% - 49px / 2);
-    top: calc(50vw - 49px - 28px); // 50vw = background height
+    top: calc(100vh - 49px - 28px);
+    transition: all 0.1s ease-out;
 
-    &:hover circle {
-        fill: $light-purple;
+    &:hover {
+        transform: scale(1.2);
     }
 }
 
-.introduction {
-    margin-top: calc(50vw + 68.5px); // 50vw = background height
+#robo-head {
+    position: fixed;
+    z-index: 1;
+    //top: calc(100vh + 83.5px);
+    right: calc(min(40px, 2vw));
+    bottom: calc(min(40px, 2vw));
+    width: calc(max(min(112.73px, 6vw), 80px));
+    height: auto;
+}
 
-    .robo-head {
-        position: absolute;
-        top: calc(50vw + 83.5px);
-        right: 39.27px;
-        width: 112.73px;
-    }
+.introduction {
+    margin-top: calc(100vh + 68.5px);
 
     .we-are {
         margin-top: 0;
@@ -256,10 +271,12 @@ nav {
 
 .product-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 80px;
+    position: relative;
+    top: 0;
+    left: 0;
 
     img {
         position: absolute;
@@ -268,14 +285,16 @@ nav {
     }
 
     h2 {
-        margin-top: 224.4px;
+        position: relative;
+        top: 224.4px;
         margin-bottom: 0;
         font-weight: bold;
         font-size: rem(30px);
     }
 
     p {
-        margin-top: 14.7px;
+        position: relative;
+        top: 224.4px;
     }
 
     h2,
@@ -284,9 +303,16 @@ nav {
         color: #434343;
     }
 
+    @media screen and (max-width: 1017px) and (min-width: 810px) {
+        .card {
+            transform: scale(0.8);
+        }
+    }
+
     .card-chatbot {
         width: 316px;
         height: 376px;
+        
 
         h2 {
             color: #588aff;
@@ -312,6 +338,17 @@ nav {
     }
 }
 
+@media screen and (max-width: 809px) {
+    .card {
+        transform: scale(1);
+        margin: 60px auto;
+    }
+
+    .product-container {
+        display: block;
+    }
+}
+
 .posts {
     color: $light-black;
     margin-top: 100px;
@@ -320,7 +357,7 @@ nav {
     h2 {
         font-family: "Gilroy-Bold", "Montserrat", sans-serif;
         font-size: rem(42px);
-        letter-spacing: -.67px;
+        letter-spacing: -0.67px;
         margin-bottom: 15px;
     }
 
@@ -369,6 +406,12 @@ nav {
         display: block;
         margin: 25px 0 0 auto;
         letter-spacing: -0.29px;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            background-color: $hover-color;
+            color: #fff;
+        }
     }
 }
 
@@ -429,6 +472,12 @@ nav {
             border-radius: 45px;
             background-color: #fff;
             font-size: rem(18px);
+            transition: all 0.2s ease-out;
+
+            &:hover {
+                color: #fff;
+                background-color: $hover-color;
+            }
         }
     }
 }

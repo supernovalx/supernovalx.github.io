@@ -1,0 +1,11 @@
+.js-slidein {
+  opacity: 0;
+  transform: translateY(200px);
+  -webkit-transition: all .8s ease-out;
+  transition: all 1s ease-out;
+}
+
+.js-slidein-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
