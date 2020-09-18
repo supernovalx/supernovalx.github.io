@@ -1,0 +1,16 @@
+.noselect {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/*# sourceMappingURL=common.css.map */

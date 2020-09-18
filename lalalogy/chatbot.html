@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lalalogy - Home</title>
+    <title>Lalalogy - LaLa chatbot</title>
     <link rel="stylesheet" href="/lalalogy/css/reset.css">
-    <link rel="stylesheet" href="/lalalogy/css/main.css">
+    <link rel="stylesheet" href="/lalalogy/css/chatbot.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/lalalogy/fonts/style.css">
     <link rel="stylesheet" href="/lalalogy/css/slidein.css">
 </head>
 <body>
-    <nav>
+    <nav class="scrolling-active">
         <div class="container">
 
             <a href="#">
@@ -35,78 +35,92 @@
         </div>
     </nav>
 
-    <img src="/lalalogy/images/index/bg-banner.png" alt="background banner" id="background" class="noselect">
-    <img src="/lalalogy/images/index/bg-elements.svg" alt="background elements" id="background-elements" class="noselect">
-    <img src="/lalalogy/images/index/CHATBOT-01@2x.png" alt="chatbot" id="robot" class="noselect">
-
-    <section class="call-to-action">     
-        <h1 class="hi-there">Hi there,<br>nice to meet you</h1>
-        <button class="chat-with-me">Chat with me now</button>       
-    </section>    
-
-    <svg onclick="scrollDown()" id="scroll-down" xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49"><g transform="translate(-935 -886)"><circle cx="24.5" cy="24.5" r="24.5" transform="translate(935 886)" fill="#fff"/><path d="M954.646,868.354l.707-.707,4,4-.707.707Z" transform="translate(0 41)" fill="#5733d1"/><path d="M963.354,868.354l-.707-.707-4,4,.707.707Z" transform="translate(-1 41)" fill="#5733d1"/></g></svg>
-    
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="112.725" height="94.83" viewBox="0 0 112.725 94.83" id="robo-head"><defs><clipPath id="a"><path d="M907.7,2735.228a32.526,32.526,0,1,1-32.526-32.527,32.526,32.526,0,0,1,32.526,32.527" transform="translate(-842.652 -2702.701)" fill="none"/></clipPath></defs><g transform="translate(-1768 -1046.5)"><g transform="translate(1798.783 1053.267)"><path d="M889.884,2784.279c.349-.005.7,0,1.044.01q.523-.018,1.044-.01a21.092,21.092,0,0,1,3.96.456h.032l.23.05.292.066.24.058.283.072.23.062c.123.034.246.068.369.1l.282.086.329.1.227.076.28.094.228.08.292.107.205.076q.232.089.463.182l.186.078.306.129.211.093.284.129.205.094c.109.051.217.1.325.157l.153.074c.151.076.3.153.453.231l.175.094.291.163.189.106.291.168.172.1.411.249.1.065c.127.08.254.159.379.241l.16.106.291.2.165.113c.1.072.2.145.3.215l.133.1c.142.1.282.207.421.313l.1.077c.109.083.216.167.323.252l.146.117.281.229.146.116c.109.093.216.185.323.279l.08.071q.2.173.39.353l.106.1c.1.09.191.177.281.269l.13.127c.088.087.176.175.264.262l.115.118c.122.127.243.253.363.381a21.944,21.944,0,0,1,3.566,5.143,46.517,46.517,0,1,0-42.044-.7,22.064,22.064,0,0,1,3.2-4.443A23.842,23.842,0,0,1,889.884,2784.279Z" transform="translate(-856.391 -2715.454)" fill="#4126b4"/><rect width="56.246" height="52.021" rx="9" transform="translate(7.459 18.768)" fill="#fff"/><rect width="25.439" height="14.463" rx="3" transform="translate(23.87 15.155)" fill="#fff"/><path d="M832.734,2753.613a5.019,5.019,0,0,0-4.99,5.021l.015,4.9a5,5,0,0,0,10.01-.031l-.015-4.9A5.019,5.019,0,0,0,832.734,2753.613Z" transform="translate(-770.405 -2716.534)" fill="#fff"/><path d="M901.493,2731.759l-20.505.135a11.206,11.206,0,0,0,.147,22.412l20.506-.135a11.206,11.206,0,1,0-.147-22.412Z" transform="translate(-858.148 -2700.72)" fill="#4126b4"/><path d="M898.553,2755.232a2.678,2.678,0,0,1,4.635-.193,5.927,5.927,0,0,1,.138,6.469,2.677,2.677,0,0,1-4.635.193A5.927,5.927,0,0,1,898.553,2755.232Z" transform="translate(-878.271 -2716.665)" fill="#fff"/><path d="M967.59,2755.232a2.678,2.678,0,0,1,4.635-.193,5.927,5.927,0,0,1,.138,6.469,2.678,2.678,0,0,1-4.635.193A5.928,5.928,0,0,1,967.59,2755.232Z" transform="translate(-928.229 -2716.665)" fill="#fff"/><g transform="translate(4.189 23.009)"><g transform="translate(0 0)" clip-path="url(#a)"><path d="M916.421,2888.114a24.877,24.877,0,0,0-1.728-4.043,23.364,23.364,0,0,0-1.725-2.788,20.473,20.473,0,0,0-2.143-2.651,22.09,22.09,0,0,0-6.578-4.715,21.184,21.184,0,0,0-3.992-.46q-.527-.01-1.054.009-.528-.018-1.053-.009a24.032,24.032,0,0,0-16.724,7.7,22.208,22.208,0,0,0-3.229,4.477,47.019,47.019,0,0,0,38.225,2.486Z" transform="translate(-868.373 -2826.266)" fill="#fff"/></g></g><path d="M955.854,2644.422v9.341h1.382v-9.341" transform="translate(-920.382 -2638.607)" fill="#235bde"/><ellipse cx="3.721" cy="3.721" rx="3.721" ry="3.721" transform="translate(32.316 2.033)" fill="#588aff"/></g><g transform="translate(1634.043 858.97)"><path d="M136.73,202.03h43.453c1.532,0,2.773,1.593,2.773,3.559v24.118c0,1.965-1.242,3.559-2.773,3.559H136.73c-1.532,0-2.773-1.594-2.773-3.559V205.589C133.957,203.623,135.2,202.03,136.73,202.03Z" fill="#4cd6f2"/><g transform="translate(140.774 229.128)"><path d="M163.052,243.128c-.672,3.607-1.217,7.188-2.073,10.785a1.232,1.232,0,0,1-1.532.83,1.281,1.281,0,0,1-.123-.044c-4.182-2.426-7.555-5.663-11.342-8.545Z" transform="translate(-147.982 -243.128)" fill="#4cd6f2"/></g></g><text transform="translate(1770 1051)" fill="#fff" font-size="30" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.016em"><tspan id="robo-head-text" x="11.69" y="29">...</tspan></text></g></svg>
-    
-    <section class="introduction js-slidein block">
-        <h1 class="we-are">We are Lalalogy</h1>
-        <p>Handy, Smart and Applicable technology for everyone. <br>We are dedicated to unleash the potential of artificial intelligence solutions.</p>
-    </section>
 
-    <section class="product-container js-slidein block">
-        <div class="card card-chatbot">
-            <!-- <img src="/lalalogy/images/index/chatbot-card.svg" alt="chatbot product" class="noselect"> -->
-            <h2>AI Chatbot</h2>
-            <p>Smart and Flexible chat bot</p>
-        </div>
-
-        <div class="card card-mobileapp">
-            <!-- <img src="/lalalogy/images/index/mobileapp-card.svg" alt="mobile app product" class="noselect"> -->
-            <h2>Mobile apps</h2>
-            <p>Trending technologies <br>on your mobile.</p>
-        </div>
-
-        <div class="card card-games">
-            <!-- <img src="/lalalogy/images/index/games-card.svg" alt="games product" class="noselect"> -->
-            <h2>Games</h2>
-            <p>Fun entertainment <br>for everyone.</p>
+    <section class="what">
+        <img src="/lalalogy/images/chatbot/art.svg" alt="" class="what-art">
+        <div class="what-content">
+            <h1>What is Lala chatbot?</h1>
+            <p>Lala Chat bot often referred to as “Chat Robot” are AI (artificial Intelligence)- Driven programs through which any user can interact via Text or Voice interfaces. Lala works as a personal assistant and lives in many major chat applications like Facebook Messenger, Slack, Telegram, Imessage etc…</p>
         </div>
     </section>
 
-    <section class="posts js-slidein block">
-        <h2>Our latest posts</h2>
-        <div class="post-container">
-            <div class="post">
-                <img src="/lalalogy/images/index/calendar.svg" alt="calendar icon" class="noselect">
-                <span>13 Sept 2020</span> 
-                <h3>List management</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris orci mi, consectetur...</p>
+    <section class="how">
+        <div class="how-content">
+            <h1>How does it work?</h1>
+            <p>With the use of algorithm of Natural Language Processing (NLP) from Rasa enables Lala to acquire meaning from inputs given by users.<br>Lala assesses the intent of the input message from the users and then creates responses based on contextual analysis…similar to the way a human thinks.</p>
+        </div>
+        <img src="/lalalogy/images/chatbot/demo.gif" alt="" class="how-art">
+    </section>
+
+    <section class="features">
+        <h1>Features</h1>
+        <div class="features-container">
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-auto-response.svg" alt="auto response feature">
+                <p>Auto response</p>
             </div>
-            <div class="post">
-                <img src="/lalalogy/images/index/calendar.svg" alt="calendar icon" class="noselect">
-                <span>13 Sept 2020</span> 
-                <h3>E-commerce update</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris orci mi, consectetur...</p>
-            </div><div class="post">
-                <img src="/lalalogy/images/index/calendar.svg" alt="calendar icon" class="noselect">
-                <span>13 Sept 2020</span> 
-                <h3>Shopify’s Q2 Report</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris orci mi, consectetur...</p>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-chit-chat.svg" alt="Chit-Chat feature">
+                <p>Chit-Chat</p>
+            </div>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-secured-login.svg" alt="Secured Login feature">
+                <p>Secured Login</p>
+            </div>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-dual-language.svg" alt="Dual Language (English and Vietnamese) feature">
+                <p>Dual Language (English and Vietnamese)</p>
+            </div>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-change-request.svg" alt="Change request managements feature">
+                <p>Change request managements</p>
+            </div>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-doc-management.svg" alt="Documents management / Library feature">
+                <p>Documents management / Library</p>
+            </div>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-extract.svg" alt="Extract and Export useful data feature">
+                <p>Extract and Export useful data</p>
+            </div>
+            <div class="feature">
+                <img src="/lalalogy/images/chatbot/f-smarter.svg" alt="BOT get smarter overtime feature">
+                <p>BOT get smarter overtime.</p>
             </div>
         </div>
-        <button>See all</button>
     </section>
 
-    <section class="stay-in-touch js-slidein block">
-        <img class="mailstanding noselect js-slidein block" src="/lalalogy/images/index/mailstanding.svg" alt="mailstanding">
-        <img class="mailbox noselect js-slidein block" src="/lalalogy/images/index/mailbox.svg" alt="mailbox">
-        <h2>Stay in touch with us</h2>
-        <form action="" method="get" class="js-slidein block">
-            <input type="email" name="" id="email" placeholder="Enter your email">
-            <button type="submit">Send</button>
-        </form>
+    <section class="benefits">
+        <h1>Key benefits</h1>
+        <div class="benefits-container">
+            <div class="benefit">
+                <img src="/lalalogy/images/chatbot/k-work247.svg" alt="Works 24/7/365 days benefit">
+                <p>Works 24/7/365 days</p>
+            </div>
+            <div class="benefit">
+                <img src="/lalalogy/images/chatbot/k-room.svg" alt="Room for additional functions for better service benefit">
+                <p>Room for additional functions for better service</p>
+            </div>
+            <div class="benefit">
+                <img src="/lalalogy/images/chatbot/k-handle.svg" alt="Able to handle many requests at once< benefit">
+                <p>Able to handle many requests at once</p>
+            </div>
+            <div class="benefit">
+                <img src="/lalalogy/images/chatbot/k-cost.svg" alt="Cost saving overtime benefit">
+                <p>Cost saving overtime</p>
+            </div>
+            <div class="benefit">
+                <img src="/lalalogy/images/chatbot/k-clean.svg" alt="Clean and easy to understand conversation flow benefit">
+                <p>Clean and easy to understand conversation flow</p>
+            </div>
+            <div class="benefit">
+                <img src="/lalalogy/images/chatbot/k-clean.svg" alt="Potentials in CRM service, new sales channels, digital marketing, support service. benefit">
+                <p>Potentials in CRM service, new sales channels, digital marketing, support service.</p>
+            </div>
+        </div>
     </section>
-    
+
     <footer>
         <div class="container">
             <img class="logo" src="/lalalogy/images/Lalalogy_Logo_Gradient@2x.png" alt="Lalalogy logo">
@@ -114,8 +128,6 @@
         </div>
     </footer>
 
-    <script src="/lalalogy/scripts/main.js"></script>
-    <script src="/lalalogy/scripts/nav.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/lalalogy/scripts/slideIn.js"></script>
 </body>

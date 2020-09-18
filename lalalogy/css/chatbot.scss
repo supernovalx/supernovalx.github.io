@@ -1,0 +1,151 @@
+@import 'common';
+
+$break: 724px;
+
+h1 {
+    font-size: rem(60px);
+    font-weight: bold;
+    color: $light-purple;
+
+    @include respond(966px) {
+        font-size: rem(50px);
+    }
+
+    @include respond(496px) {
+        font-size: rem(40px);
+    }
+}
+
+p {
+    line-height: 30px;
+}
+
+.what, .how {
+    display: flex;
+
+    @include respond($break) {
+        display: block;
+    }
+
+    p {
+        font-size: rem(16px);
+
+        @include respond($break) {
+            text-align: justify;
+        }
+    }
+}
+
+.what {
+    margin-top: 130px; 
+
+    img {
+        display: block;
+        width: 678px;
+        height: 551px;
+        margin-left: -160px;
+        flex: 1;
+
+        @include respond(1074px) {
+            width: 40vw;
+            height: auto;
+
+            margin-left: -100px;
+        }
+
+        @include respond($break) {
+            width: 95vw;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+
+    div {
+        align-self: flex-end;
+        flex: 1;
+        margin-left: 52px;
+
+        @include respond($break) {
+            margin-left: 0;
+        }
+
+        p {
+            margin-top: 47px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.how {
+    margin-top: 80px;
+    margin-bottom: 66px;
+
+    @include respond($break) {
+        margin-top: 50px;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    img {
+        display: block;
+        width: 532px;
+        height: 435px;
+        box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.08);
+
+        @include respond(1074px) {
+            width: 50vw;
+            height: 50vw * 0.8176;
+            align-self: center;
+        }
+
+        @include respond($break) {
+            width: 95vw;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+    }
+
+    div {
+        margin-right: 49px;
+
+        @include respond($break) {
+            margin-right: 0;
+        }
+
+        p {
+            margin-top: 47px;
+        }
+    }
+}
+
+.features-container, .benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    div {
+        width: 250px;
+        margin-bottom: 51px;
+
+        img {
+            display: block;
+            width: 168px;
+            margin: 0 auto;
+        }
+        p {
+            margin-top: 38px;
+            text-align: center;
+        }
+    }
+}
+
+.benefits {
+    margin-bottom: 245px;
+
+    @include respond(966px) {
+        margin-bottom: 100px;
+    }
+}

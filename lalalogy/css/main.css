@@ -14,6 +14,19 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.container,
+section {
+  width: 1088px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1160px) {
+  .container,
+  section {
+    width: 93vw;
+  }
+}
+
 .logo {
   height: 65px;
   -webkit-filter: brightness(0) invert(1);
@@ -28,13 +41,6 @@ body {
           user-select: none;
 }
 
-.container,
-section,
-footer {
-  width: calc(min(1088px, 95vw));
-  margin: 0 auto;
-}
-
 nav {
   position: fixed;
   z-index: 10;
@@ -44,6 +50,13 @@ nav {
   width: 100%;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 910px) {
+  nav {
+    font-size: 1.0625rem;
+  }
 }
 
 nav div {
@@ -63,29 +76,28 @@ nav div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav div ul li {
   margin-left: 29px;
 }
 
-nav div ul li a {
+nav div ul a {
   text-decoration: none;
   color: #fff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-nav div ul li a:hover {
+nav div ul a:hover {
   color: #588aff;
 }
 
 nav div ul li svg {
   position: relative;
-  bottom: -6px;
 }
 
 nav div ul li svg .a {
@@ -93,24 +105,29 @@ nav div ul li svg .a {
   transition: fill 0.5s ease-out;
 }
 
-nav div ul .facebook {
+nav div ul .fb {
   margin-left: 34.5px;
+  margin-bottom: 8px;
 }
 
 nav div ul .instagram {
   margin-left: 29.6px;
+  margin-bottom: 7px;
 }
 
 nav div ul .twitter {
   margin-left: 27.4px;
+  margin-bottom: 7px;
 }
 
 nav div ul .lang-btn {
+  position: relative;
+  bottom: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 38px;
   width: 50px;
-  font-weight: 400;
+  height: 38px;
+  font-weight: lighter;
   border: none;
   margin: 0;
 }
@@ -137,7 +154,7 @@ nav.scrolling-active {
 }
 
 nav.scrolling-active a {
-  color: #6f55d9 !important;
+  color: #6f55d9;
 }
 
 nav.scrolling-active .lang-btn {
@@ -157,9 +174,38 @@ nav.scrolling-active .logo {
           filter: none;
 }
 
+footer {
+  height: 106px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("/lalalogy/images/footer.png");
+  background-size: cover;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  max-width: 1088px;
+}
+
+footer .container p {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
 #background {
   position: absolute;
   top: 0;
+  left: 0;
   z-index: -20;
   width: 100%;
   height: 100vh;
@@ -167,61 +213,11 @@ nav.scrolling-active .logo {
 
 #background-elements {
   position: absolute;
-  top: 5vh;
-  left: 12vw;
-  width: calc(100vw - 13vw);
-  height: 95vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   z-index: -10;
-  -webkit-animation-name: floating;
-          animation-name: floating;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes floating {
-  from {
-    -webkit-transform: translate(0, 0px) scale(1);
-            transform: translate(0, 0px) scale(1);
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 20px) scale(0.98);
-            transform: translate(0, 20px) scale(0.98);
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  to {
-    -webkit-transform: translate(0, 0px) scale(1);
-            transform: translate(0, 0px) scale(1);
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-}
-
-@keyframes floating {
-  from {
-    -webkit-transform: translate(0, 0px) scale(1);
-            transform: translate(0, 0px) scale(1);
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 20px) scale(0.98);
-            transform: translate(0, 20px) scale(0.98);
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-  }
-  to {
-    -webkit-transform: translate(0, 0px) scale(1);
-            transform: translate(0, 0px) scale(1);
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-  }
 }
 
 #robot {
@@ -235,32 +231,49 @@ nav.scrolling-active .logo {
 .call-to-action {
   position: absolute;
   top: 38.1vh;
-  left: calc((100vw - min(1088px, 95vw)) / 2);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .call-to-action h1 {
-  font-size: calc(max(min(3.4375rem, 5vw), 1.875rem));
+  font-size: 3.4375rem;
   font-weight: bold;
   color: #fff;
   letter-spacing: -0.88px;
+}
+
+@media (max-width: 1069px) {
+  .call-to-action h1 {
+    font-size: calc(0.1rem + 4.8vw);
+  }
 }
 
 .call-to-action .chat-with-me {
   background-color: #fff;
   text-transform: uppercase;
   color: #2d2d2d;
-  font-size: calc(max(min(1.375rem, 2.1vw), 1rem));
+  font-size: 1.375rem;
   font-weight: 400;
   border-radius: 30px;
   border-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: calc(min(59px, 25vw * 0.2041));
-  width: calc(min(289px, 25vw));
+  width: 289px;
+  height: 58.9849px;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+@media (max-width: 1069px) {
+  .call-to-action .chat-with-me {
+    font-size: calc(0.1rem + 1.9vw);
+    width: 25vw;
+    height: 5.1025vw;
+  }
 }
 
 .call-to-action .chat-with-me:hover {
@@ -306,6 +319,12 @@ nav.scrolling-active .logo {
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .introduction .we-are {
+    font-size: 10vw;
+  }
+}
+
 .introduction p {
   text-align: center;
   color: #2d2d2d;
@@ -313,7 +332,16 @@ nav.scrolling-active .logo {
   line-height: 30px;
 }
 
+@media (max-width: 600px) {
+  .introduction p {
+    font-size: 3vw;
+  }
+}
+
 .product-container {
+  position: relative;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,9 +352,12 @@ nav.scrolling-active .logo {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-top: 80px;
-  position: relative;
-  top: 0;
-  left: 0;
+}
+
+@media (max-width: 900px) {
+  .product-container {
+    display: block;
+  }
 }
 
 .product-container img {
@@ -354,15 +385,29 @@ nav.scrolling-active .logo {
   color: #434343;
 }
 
-@media screen and (max-width: 1017px) and (min-width: 810px) {
+.product-container .card {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 293px;
+}
+
+@media (max-width: 1017px) {
   .product-container .card {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(0.93);
+            transform: scale(0.93);
+  }
+}
+
+@media (max-width: 900px) {
+  .product-container .card {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin: 12vh auto;
   }
 }
 
 .product-container .card-chatbot {
-  width: 316px;
+  background-image: url("/lalalogy/images/index/chatbot-card.svg");
   height: 376px;
 }
 
@@ -371,7 +416,7 @@ nav.scrolling-active .logo {
 }
 
 .product-container .card-mobileapp {
-  width: 293px;
+  background-image: url("/lalalogy/images/index/mobileapp-card.svg");
   height: 375px;
 }
 
@@ -380,23 +425,12 @@ nav.scrolling-active .logo {
 }
 
 .product-container .card-games {
-  width: 293px;
+  background-image: url("/lalalogy/images/index/games-card.svg");
   height: 384px;
 }
 
 .product-container .card-games h2 {
   color: #4cd6f2;
-}
-
-@media screen and (max-width: 809px) {
-  .card {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    margin: 60px auto;
-  }
-  .product-container {
-    display: block;
-  }
 }
 
 .posts {
@@ -420,8 +454,20 @@ nav.scrolling-active .logo {
           justify-content: space-between;
 }
 
+@media (max-width: 874px) {
+  .posts .post-container {
+    display: block;
+  }
+}
+
 .posts .post-container .post {
   width: 259px;
+}
+
+@media (max-width: 874px) {
+  .posts .post-container .post {
+    width: 100%;
+  }
 }
 
 .posts .post-container .post img {
@@ -470,6 +516,14 @@ nav.scrolling-active .logo {
 .stay-in-touch {
   position: relative;
   margin-top: 318px;
+  margin-bottom: 159px;
+}
+
+@media (max-width: 734px) {
+  .stay-in-touch {
+    width: 100%;
+    background-color: #65D4F1;
+  }
 }
 
 .stay-in-touch .mailstanding {
@@ -480,12 +534,24 @@ nav.scrolling-active .logo {
   z-index: -10;
 }
 
+@media (max-width: 734px) {
+  .stay-in-touch .mailstanding {
+    z-index: -30;
+  }
+}
+
 .stay-in-touch .mailbox {
   display: block;
   position: relative;
   z-index: -20;
   width: 100%;
   height: 206px;
+}
+
+@media (max-width: 734px) {
+  .stay-in-touch .mailbox {
+    visibility: hidden;
+  }
 }
 
 .stay-in-touch h2 {
@@ -498,10 +564,24 @@ nav.scrolling-active .logo {
   margin: 0;
 }
 
+@media (max-width: 734px) {
+  .stay-in-touch h2 {
+    left: 3.5vw;
+    right: auto;
+  }
+}
+
 .stay-in-touch form {
   position: absolute;
   top: 111px;
   right: 53px;
+}
+
+@media (max-width: 734px) {
+  .stay-in-touch form {
+    left: 3.5vw;
+    right: auto;
+  }
 }
 
 .stay-in-touch form input {
@@ -545,32 +625,5 @@ nav.scrolling-active .logo {
 .stay-in-touch form button:hover {
   color: #fff;
   background-color: #588aff;
-}
-
-footer {
-  height: 106px;
-  width: 100%;
-  margin-top: 159px;
-  background-image: url("/lalalogy/images/footer.png");
-  background-size: cover;
-}
-
-footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-footer .container p {
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

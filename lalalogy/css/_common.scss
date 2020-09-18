@@ -1,0 +1,187 @@
+$light-purple: #6f55d9;
+$light-black: #2d2d2d;
+$hover-color: #588aff;
+$transition-duration: 0.5s;
+$content-width: 1088px; //calc(min(1088px, 95vw));
+$call-to-action-left: calc((100vw - min(1088px, 95vw)) / 2);
+
+@function rem($size) {
+    @return $size / 16px * 1rem;
+}
+
+@mixin respond($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+.noselect {
+    user-select: none;
+    pointer-events: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container,
+section {
+    width: $content-width;
+    margin: 0 auto;
+
+    @include respond(1160px) {
+        width: 93vw;
+    }
+}
+
+.logo {
+    height: 65px;
+    filter: brightness(0) invert(1);
+    transition: filter $transition-duration ease-out;
+    user-select: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding-top: 28px;
+    width: 100%;
+    transition: all $transition-duration ease-out;
+    font-size: rem(18px);
+
+    @include respond(910px) {
+        font-size: rem(17px);
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            color: #fff;
+            text-transform: capitalize;
+            font-weight: lighter;
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            li {
+                margin-left: 29px;
+            }
+
+            // Links
+            a {
+                text-decoration: none;
+                color: #fff;
+                transition: all $transition-duration ease;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+
+            // Social buttons
+            li svg {
+                position: relative;
+            }
+
+            li svg .a {
+                transition: fill $transition-duration ease-out;
+            }
+
+            .fb {
+                margin-left: 34.5px;
+                margin-bottom: 8px;
+            }
+
+            .instagram {
+                margin-left: 29.6px;
+                margin-bottom: 7px;
+            }
+
+            .twitter {
+                margin-left: 27.4px;
+                margin-bottom: 7px;
+            }
+
+            .lang-btn {
+                position: relative;
+                bottom: 4px;
+                box-sizing: border-box;
+                width: 50px;
+                height: 38px;
+                font-weight: lighter;
+                border: none;
+                margin: 0;
+            }
+
+            .lang-vi {
+                border-radius: 20px 0 0 20px;
+                background-color: #fff;
+                color: #5733d1;
+            }
+
+            .lang-en {
+                border-radius: 0 20px 20px 0;
+                background-color: $light-purple;
+                color: #fff;
+            }
+        }
+    }
+
+    &.scrolling-active {
+        background-color: #fff;
+        padding-bottom: 21px;
+        padding-top: 20px;
+        border-bottom: 3px solid $light-purple;
+        box-shadow: 0px 1px 0px 0px rgba(112, 112, 112, 1);
+
+        a {
+            color: $light-purple;
+        }
+
+        .lang-btn {
+            border: 1px solid $light-purple;
+        }
+
+        .lang-en {
+            color: #fff;
+        }
+
+        svg path {
+            fill: $light-purple;
+        }
+
+        .logo {
+            filter: none;
+        }
+    }
+}
+
+footer {
+    height: 106px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("/lalalogy/images/footer.png");
+    background-size: cover;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-width: $content-width;
+
+        p {
+            font-size: rem(18px);
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+}
