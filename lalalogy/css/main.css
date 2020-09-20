@@ -548,12 +548,6 @@ footer .container p {
   height: 206px;
 }
 
-@media (max-width: 734px) {
-  .stay-in-touch .mailbox {
-    visibility: hidden;
-  }
-}
-
 .stay-in-touch h2 {
   font-size: 2rem;
   font-weight: bold;
