@@ -4,6 +4,7 @@ $hover-color: #588aff;
 $transition-duration: 0.5s;
 $content-width: 1088px; //calc(min(1088px, 95vw));
 $call-to-action-left: calc((100vw - min(1088px, 95vw)) / 2);
+$mobile-breakpoint: 440px;
 
 @function rem($size) {
     @return $size / 16px * 1rem;
@@ -59,6 +60,10 @@ nav {
         font-size: rem(17px);
     }
 
+    @include respond($mobile-breakpoint) {
+        padding-top: 76px;
+    }
+
     div {
         display: flex;
         justify-content: space-between;
@@ -70,6 +75,7 @@ nav {
             list-style: none;
             display: flex;
             align-items: center;
+            padding-left: 0;
 
             li {
                 margin-left: 29px;
@@ -132,6 +138,37 @@ nav {
                 background-color: $light-purple;
                 color: #fff;
             }
+
+            .hamburger {
+                cursor: pointer;
+                bottom: 3px;
+                display: none;
+
+                &:hover rect {
+                    fill: $hover-color;
+                    stroke: $hover-color;
+                }
+            }
+
+            @include respond(972px) {
+                .hide {
+                    display: none;
+                }
+
+                .hamburger {
+                    display: inherit;
+                }
+
+                .lang-btn-container {
+                    margin-left: 0;
+                }
+
+                .lang-btn {
+                    font-size: rem(13px);
+                    width: 37.5px;
+                    height: 28.87px;
+                }
+            }
         }
     }
 
@@ -161,6 +198,11 @@ nav {
         .logo {
             filter: none;
         }
+
+        .hamburger rect {
+            fill: $light-purple;
+            stroke: $light-purple;
+        }
     }
 }
 
@@ -171,17 +213,36 @@ footer {
     background-image: url("/lalalogy/images/footer.png");
     background-size: cover;
 
+    @include respond($mobile-breakpoint) {
+        height: 501px;
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
         max-width: $content-width;
-
+        
         p {
             font-size: rem(18px);
             text-transform: uppercase;
             color: #fff;
         }
+        
+        @include respond($mobile-breakpoint) {
+            flex-direction: column;
+
+            img {
+                padding-top: 70px;
+            }
+
+            p {
+                padding-bottom: 30px;
+                font-family: "Gilroy-Bold", "Montserrat", sans-serif;
+                font-size: rem(18px);
+            }
+        }
+
     }
 }

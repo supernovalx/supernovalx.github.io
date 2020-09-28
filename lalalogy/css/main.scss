@@ -1,14 +1,87 @@
 @import 'common';
 
-#background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -20;
-    width: 100%;
-    height: 100vh;
+body {
+    background-image: url("/lalalogy/images/index/bg.svg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+
+    @include respond($mobile-breakpoint) {
+        background-size: 199vh 100vh;
+        background-position: center top;
+    }
 }
 
+#nav-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+
+    background-image: url("/lalalogy/images/index/bg.svg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    
+    @include respond($mobile-breakpoint) {
+        background-size: 199vh 100vh;
+        background-position: center top;
+    }
+
+
+    .logo {
+        display: block;
+        width: 49px;
+        height: 47px;
+        margin: 22vh auto 65px auto;
+    }
+
+    a {
+        display: block;
+        margin-top: 27px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: rem(18px);
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    .social-btn {
+        width: 136px;
+        margin: 0 auto;
+        margin-top: 122px;
+        
+        a {
+            display: inline-block;
+
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+
+        }
+    }
+
+    .exit {
+        cursor: pointer;
+        position: absolute;
+        top: 90px;
+        right: 40px;
+
+        &:hover rect {
+            fill: $hover-color;
+            stroke: $hover-color;
+        }
+    }
+
+    &.hidden {
+        display: none;
+        // visibility: hidden;
+    }
+
+}
 #background-elements {
     position: absolute;
     top: 0;
@@ -102,6 +175,10 @@
 
 .introduction {
     margin-top: calc(100vh + 68.5px);
+
+    @include respond($mobile-breakpoint) {
+    margin-top: calc(100vh + 47.5px);
+    }
 
     .we-are {
         margin-top: 0;
@@ -216,6 +293,10 @@
     color: $light-black;
     margin-top: 100px;
 
+    @include respond($mobile-breakpoint) {
+        text-align: center;
+    }
+
     // Section heading
     h2 {
         font-family: "Gilroy-Bold", "Montserrat", sans-serif;
@@ -249,8 +330,20 @@
 
             // Post datetime
             span {
+                display: block;
                 font-family: "Gilroy-Medium", "Montserrat", sans-serif;
                 font-size: rem(14px);
+            }
+
+            span::before {
+                display: inline-block;
+                position: relative;
+                top: 8px;
+                margin-right: 5px;
+                content: "";
+                background-image: url("/lalalogy/images/index/calendar.svg");
+                width: 29px;
+                height: 29px;
             }
 
             // Post heading
@@ -283,6 +376,10 @@
             background-color: $hover-color;
             color: #fff;
         }
+
+        @include respond($mobile-breakpoint) {
+            margin: 50px auto 0 auto;
+        }
     }
 }
 
@@ -290,14 +387,20 @@
     position: relative;
     margin-top: 318px;
     margin-bottom: 159px;
-
     
     @include respond(734px) {
         //overflow-x: clip;
         width: 100%;
         background-color: #65D4F1;
-        
+        height: 206px;
     }
+
+    @include respond($mobile-breakpoint) {
+        margin-bottom: 0;
+        margin-top: 75px;
+        height: 395px;
+    }
+
 
     .mailstanding {
         width: 283px;
@@ -309,6 +412,10 @@
         @include respond(734px) {
             z-index: -30;
         }
+
+        @include respond($mobile-breakpoint) {
+            display: none;
+        }
     }
 
     .mailbox {
@@ -318,10 +425,8 @@
         width: 100%;
         height: 206px;
 
-        @include respond(734px) {
-            //width: 150vw;
-            //left: -30vw;
-            //visibility: hidden;
+        @include respond($mobile-breakpoint) {
+            display: none;
         }
     }
 
@@ -338,6 +443,13 @@
             left: 3.5vw;
             right: auto;
         }
+
+        @include respond($mobile-breakpoint) {
+            position: static;
+            padding-top: 70px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
     }
 
     form {
@@ -349,6 +461,10 @@
             left: 3.5vw;
             right: auto;
 
+        }
+
+        @include respond($mobile-breakpoint) {
+            position: static;
         }
 
         input {
@@ -364,6 +480,16 @@
             &::placeholder {
                 color: #fff;
             }
+
+            @include respond($mobile-breakpoint) {
+                display: block;
+                width: 68vw;
+                margin: 0 auto;
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
         }
 
         button {
@@ -378,6 +504,12 @@
             &:hover {
                 color: #fff;
                 background-color: $hover-color;
+            }
+
+            @include respond($mobile-breakpoint) {
+                display: block;
+                margin: 0 auto;
+                margin-top: 50px;
             }
         }
     }

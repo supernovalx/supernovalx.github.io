@@ -43,3 +43,30 @@ function scrollDown() {
         behavior: "smooth",
     });
 }
+
+
+
+// Animate the properties individually
+gsap.utils.toArray(".bgelement").forEach(star => {
+    tweenProperty(star, "x", -50, 50);
+    tweenProperty(star, "y", -50, 50);
+  });
+  
+  
+  function tweenProperty(target, prop, min, max) {
+    
+    var randomDur = gsap.utils.random(2, 3, 0.2, true);
+    var randomDelay = 0;
+  
+    gsap.to(target,  {
+      [prop]: gsap.utils.random(min, max),
+      duration: randomDur(), 
+      delay: 0, 
+      ease: 'none',
+      onComplete: tweenProperty,
+      onCompleteParams: [target, prop, min, max]
+    });
+  
+  }
+  
+  

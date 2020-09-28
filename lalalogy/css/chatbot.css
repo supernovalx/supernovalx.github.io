@@ -59,6 +59,12 @@ nav {
   }
 }
 
+@media (max-width: 440px) {
+  nav {
+    padding-top: 76px;
+  }
+}
+
 nav div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +85,7 @@ nav div ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 0;
 }
 
 nav div ul li {
@@ -144,6 +151,34 @@ nav div ul .lang-en {
   color: #fff;
 }
 
+nav div ul .hamburger {
+  cursor: pointer;
+  bottom: 3px;
+  display: none;
+}
+
+nav div ul .hamburger:hover rect {
+  fill: #588aff;
+  stroke: #588aff;
+}
+
+@media (max-width: 972px) {
+  nav div ul .hide {
+    display: none;
+  }
+  nav div ul .hamburger {
+    display: inherit;
+  }
+  nav div ul .lang-btn-container {
+    margin-left: 0;
+  }
+  nav div ul .lang-btn {
+    font-size: 0.8125rem;
+    width: 37.5px;
+    height: 28.87px;
+  }
+}
+
 nav.scrolling-active {
   background-color: #fff;
   padding-bottom: 21px;
@@ -174,12 +209,23 @@ nav.scrolling-active .logo {
           filter: none;
 }
 
+nav.scrolling-active .hamburger rect {
+  fill: #6f55d9;
+  stroke: #6f55d9;
+}
+
 footer {
   height: 106px;
   width: 100%;
   margin: 0 auto;
   background-image: url("/lalalogy/images/footer.png");
   background-size: cover;
+}
+
+@media (max-width: 440px) {
+  footer {
+    height: 501px;
+  }
 }
 
 footer .container {
@@ -200,6 +246,23 @@ footer .container p {
   font-size: 1.125rem;
   text-transform: uppercase;
   color: #fff;
+}
+
+@media (max-width: 440px) {
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container img {
+    padding-top: 70px;
+  }
+  footer .container p {
+    padding-bottom: 30px;
+    font-family: "Gilroy-Bold", "Montserrat", sans-serif;
+    font-size: 1.125rem;
+  }
 }
 
 h1 {
@@ -356,8 +419,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
