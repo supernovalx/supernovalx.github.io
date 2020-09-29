@@ -11,77 +11,7 @@ body {
     }
 }
 
-#nav-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
 
-    background-image: url("/lalalogy/images/index/bg.svg");
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-    
-    @include respond($mobile-breakpoint) {
-        background-size: 199vh 100vh;
-        background-position: center top;
-    }
-
-
-    .logo {
-        display: block;
-        width: 49px;
-        height: 47px;
-        margin: 22vh auto 65px auto;
-    }
-
-    a {
-        display: block;
-        margin-top: 27px;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-        font-size: rem(18px);
-
-        &:hover {
-            color: $hover-color;
-        }
-    }
-
-    .social-btn {
-        width: 136px;
-        margin: 0 auto;
-        margin-top: 122px;
-        
-        a {
-            display: inline-block;
-
-            &:not(:first-child) {
-                margin-left: 30px;
-            }
-
-        }
-    }
-
-    .exit {
-        cursor: pointer;
-        position: absolute;
-        top: 90px;
-        right: 40px;
-
-        &:hover rect {
-            fill: $hover-color;
-            stroke: $hover-color;
-        }
-    }
-
-    &.hidden {
-        display: none;
-        // visibility: hidden;
-    }
-
-}
 #background-elements {
     position: absolute;
     top: 0;
@@ -221,35 +151,40 @@ body {
         display: block;
     }
 
-    img {
-        position: absolute;
-        margin: 0;
-        z-index: -1;
-    }
-
-    h2 {
-        position: relative;
-        top: 224.4px;
-        margin-bottom: 0;
-        font-weight: bold;
-        font-size: rem(30px);
-    }
-
-    p {
-        position: relative;
-        top: 224.4px;
-    }
-
-    h2,
-    p {
-        margin-left: 35px;
-        color: #434343;
-    }
-
     .card {
+        display: block;
+        text-decoration: none;
         background-repeat: no-repeat;
         background-size: contain;
         width: 293px;
+        position: relative;
+        text-align: center;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        h2 {
+            position: relative;
+            top: 224.4px;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: rem(30px);
+        }
+    
+        p {
+            position: relative;
+            top: 224.4px;
+        }
+    
+        h2,
+        p {
+            //margin-left: 35px;
+            color: #434343;
+        }
 
         @include respond(1017px) {
             transform: scale(0.93);
@@ -262,7 +197,7 @@ body {
     }
 
     .card-chatbot {
-        background-image: url("/lalalogy/images/index/chatbot-card.svg");
+        //background-image: url("/lalalogy/images/index/chatbot-card.svg");
         height: 376px;
 
         h2 {
@@ -271,7 +206,7 @@ body {
     }
 
     .card-mobileapp {
-        background-image: url("/lalalogy/images/index/mobileapp-card.svg");
+        //background-image: url("/lalalogy/images/index/mobileapp-card.svg");
         height: 375px;
 
         h2 {
@@ -280,7 +215,7 @@ body {
     }
 
     .card-games {
-        background-image: url("/lalalogy/images/index/games-card.svg");
+        //background-image: url("/lalalogy/images/index/games-card.svg");
         height: 384px;
 
         h2 {

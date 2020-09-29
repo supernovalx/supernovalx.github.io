@@ -206,14 +206,88 @@ nav {
     }
 }
 
+#nav-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+
+    background-image: url("/lalalogy/images/index/bg.svg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    
+    @include respond($mobile-breakpoint) {
+        background-size: 199vh 100vh;
+        background-position: center top;
+    }
+
+
+    .logo {
+        display: block;
+        width: 49px;
+        height: 47px;
+        margin: 22vh auto 65px auto;
+    }
+
+    a {
+        display: block;
+        margin-top: 27px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: rem(18px);
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    .social-btn {
+        width: 136px;
+        margin: 0 auto;
+        margin-top: 122px;
+        
+        a {
+            display: inline-block;
+
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+
+        }
+    }
+
+    .exit {
+        cursor: pointer;
+        position: absolute;
+        top: 90px;
+        right: 40px;
+
+        &:hover rect {
+            fill: $hover-color;
+            stroke: $hover-color;
+        }
+    }
+
+    &.hidden {
+        display: none;
+        // visibility: hidden;
+    }
+
+}
+
 footer {
     height: 106px;
     width: 100%;
     margin: 0 auto;
     background-image: url("/lalalogy/images/footer.png");
     background-size: cover;
+    background-repeat: no-repeat;
 
     @include respond($mobile-breakpoint) {
+        background-image: url("/lalalogy/images/mobile-footer.png");
         height: 501px;
     }
 
@@ -229,7 +303,7 @@ footer {
             text-transform: uppercase;
             color: #fff;
         }
-        
+
         @include respond($mobile-breakpoint) {
             flex-direction: column;
 
