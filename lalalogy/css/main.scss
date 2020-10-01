@@ -160,6 +160,10 @@ body {
         position: relative;
         text-align: center;
 
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+
+
         svg {
             position: absolute;
             top: 0;
@@ -184,6 +188,7 @@ body {
         p {
             //margin-left: 35px;
             color: #434343;
+            transform: translateZ(25px);
         }
 
         @include respond(1017px) {
