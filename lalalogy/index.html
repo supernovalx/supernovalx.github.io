@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="/lalalogy/fonts/style.css" />
         <link rel="stylesheet" href="/lalalogy/css/slidein.css" />
     </head>
-    <body>
+    <body onresize="oneResize()">
+        <p id="ratio">0</p>
         <nav>
             <div class="container">
                 <a href="#">
@@ -147,6 +148,7 @@
                         <svg
                             onclick="onHamburgerClick()"
                             class="hamburger"
+                            id="hamburger"
                             width="30"
                             height="13.933"
                             viewBox="0 0 30 13.933"
@@ -294,6 +296,7 @@
             </div>
             <svg
                 class="exit"
+                id="exit"
                 onclick="onNavModalExit()"
                 width="24.31"
                 height="24.31"
@@ -1604,9 +1607,9 @@
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/lalalogy/scripts/main.js"></script>
         <script src="/lalalogy/scripts/nav.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/lalalogy/scripts/slideIn.js"></script>
     </body>
 </html>

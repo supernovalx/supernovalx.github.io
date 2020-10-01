@@ -455,3 +455,12 @@ body {
     }
 }
 
+#ratio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
+    z-index: 1000000;
+}
