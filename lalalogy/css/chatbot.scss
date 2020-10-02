@@ -79,6 +79,7 @@ p {
 .how {
     margin-top: 80px;
     margin-bottom: 66px;
+    display: block;
 
     @include respond($break) {
         margin-top: 50px;
@@ -88,28 +89,14 @@ p {
         margin-top: 0;
     }
 
-    img {
-        display: block;
-        width: 532px;
-        height: 435px;
-        box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.08);
-
-        @include respond(1074px) {
-            width: 50vw;
-            height: 50vw * 0.8176;
-            align-self: center;
-        }
-
-        @include respond($break) {
-            width: 95vw;
-            height: auto;
-            margin: 0 auto;
-            margin-top: 60px;
-        }
-    }
-
-    div {
+    .how-content {
+        display: inline-block;
         margin-right: 49px;
+        max-width: 504px;
+
+        @include respond(1118px) {
+            max-width: none;
+        }
 
         @include respond($break) {
             margin-right: 0;
@@ -117,6 +104,75 @@ p {
 
         p {
             margin-top: 47px;
+        }
+    }
+
+    .chat-demo {
+        display: inline-block;
+        width: 480px;
+        height: 400px;
+        box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.08);
+        position: relative;
+        overflow: hidden;
+        top: 50px;
+
+        @include respond(1118px) {
+            margin: 0 auto;
+            display: block;
+        }
+
+        @include respond(539px) {
+            width: 100%;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .human {
+            background: #396EEA;
+            padding: 10px;
+            color: #fff;
+            position: relative;
+            width: 250px;
+            margin: 30px 10px 30px auto;
+
+            &:before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                border-left: 10px solid transparent;
+                border-right: 10px solid #396EEA;
+                border-top: 10px solid #396EEA;
+                border-bottom: 10px solid transparent;
+                right: 0px;
+                bottom: -9px;
+            }
+        }
+
+        .robot {
+            margin-bottom: 20px;
+            margin-left: 10px;
+
+            img {
+                position: relative;
+                top: 10px;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+            }
+
+            p {
+                background: #F1F1F1;
+                padding: 10px;
+                display: inline-block;
+                margin: 0;
+                line-height: 1.15;
+                max-width: 300px;
+            }
         }
     }
 }

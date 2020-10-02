@@ -451,6 +451,7 @@ p {
 .how {
   margin-top: 80px;
   margin-bottom: 66px;
+  display: block;
 }
 
 @media (max-width: 724px) {
@@ -463,45 +464,100 @@ p {
   margin-top: 0;
 }
 
-.how img {
-  display: block;
-  width: 532px;
-  height: 435px;
-  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.08);
-}
-
-@media (max-width: 1074px) {
-  .how img {
-    width: 50vw;
-    height: 40.88vw;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-}
-
-@media (max-width: 724px) {
-  .how img {
-    width: 95vw;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 60px;
-  }
-}
-
-.how div {
+.how .how-content {
+  display: inline-block;
   margin-right: 49px;
+  max-width: 504px;
+}
+
+@media (max-width: 1118px) {
+  .how .how-content {
+    max-width: none;
+  }
 }
 
 @media (max-width: 724px) {
-  .how div {
+  .how .how-content {
     margin-right: 0;
   }
 }
 
-.how div p {
+.how .how-content p {
   margin-top: 47px;
+}
+
+.how .chat-demo {
+  display: inline-block;
+  width: 480px;
+  height: 400px;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  top: 50px;
+}
+
+@media (max-width: 1118px) {
+  .how .chat-demo {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 539px) {
+  .how .chat-demo {
+    width: 100%;
+  }
+}
+
+.how .chat-demo .content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.how .chat-demo .human {
+  background: #396EEA;
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  width: 250px;
+  margin: 30px 10px 30px auto;
+}
+
+.how .chat-demo .human:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #396EEA;
+  border-top: 10px solid #396EEA;
+  border-bottom: 10px solid transparent;
+  right: 0px;
+  bottom: -9px;
+}
+
+.how .chat-demo .robot {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.how .chat-demo .robot img {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.how .chat-demo .robot p {
+  background: #F1F1F1;
+  padding: 10px;
+  display: inline-block;
+  margin: 0;
+  line-height: 1.15;
+  max-width: 300px;
 }
 
 .features-container, .benefits-container {

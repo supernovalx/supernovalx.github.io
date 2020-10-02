@@ -1,0 +1,1 @@
+gsap.timeline({repeat: -1, repeatDelay: 5}).from(".chat-line", {display: "none", scale: 0, stagger: 2});
