@@ -1,24 +1,3 @@
-let chatbotAnim = null;
-document
-    .querySelector("#robo-head")
-    .addEventListener("mouseenter", function () {
-        chatbotAnim = setInterval(function () {
-            let tspan = document.querySelector("#robo-head-text").textContent;
-            if (tspan === "...")
-                document.querySelector("#robo-head-text").textContent = ".";
-            else
-                document.querySelector("#robo-head-text").textContent =
-                    document.querySelector("#robo-head-text").textContent + ".";
-        }, 300);
-    });
-
-document
-    .querySelector("#robo-head")
-    .addEventListener("mouseleave", function () {
-        clearInterval(chatbotAnim);
-        document.querySelector("#robo-head-text").textContent = "...";
-    });
-
 function vw(v) {
     let w = Math.max(
         document.documentElement.clientWidth,
