@@ -1,5 +1,4 @@
 @import 'common';
-$one-col-aspect-ratio: 0.9;
 
 
 body {
@@ -33,7 +32,7 @@ body {
     max-width: 621px;
     max-height: 640px;
 
-    @media (max-aspect-ratio: $one-col-aspect-ratio) {
+    &.one-col {
         top: 55vh;
         left: 50vw;
 
@@ -54,10 +53,6 @@ body {
     left: 0;
     right: 0;
 
-    @media (max-aspect-ratio: $one-col-aspect-ratio) {
-        top: 17vh;
-    }
-
     h1 {
         font-size: rem(55px); //calc(max(min(#{rem(55px)}, 5vw), #{rem(30px)}));
         font-weight: bold;
@@ -68,9 +63,6 @@ body {
             font-size: rem(35px); //calc(0.1rem + 6vw);
         }
 
-        @media (max-aspect-ratio: $one-col-aspect-ratio) {
-            text-align: center;
-        }
     }
 
     .chat-with-me {
@@ -98,15 +90,24 @@ body {
             height: 51px; //35vw * $button-ratio;
         }
 
-        @media (max-aspect-ratio: $one-col-aspect-ratio) {
-            display: block;
-            margin: 0 auto;
-            margin-top: 50vh;
-        }
 
         &:hover {
             background-color: $hover-color;
             color: #fff;
+        }
+    }
+
+    &.one-col {
+        top: 17vh;
+
+        h1 {
+            text-align: center;
+        }
+
+        .chat-with-me {
+            display: block;
+            margin: 0 auto;
+            margin-top: 50vh;
         }
     }
 }
@@ -354,6 +355,8 @@ body {
     position: relative;
     margin-top: 318px;
     margin-bottom: 159px;
+
+    transform: perspective(1000px);
     
     @include respond(734px) {
         //overflow-x: clip;

@@ -387,15 +387,13 @@ body {
   max-height: 640px;
 }
 
-@media (max-aspect-ratio: 0.9) {
-  #robot {
-    top: 55vh;
-    left: 50vw;
-    width: min(38vh, 84vw);
-    height: min(40vh, 87vw);
-    margin-left: max(-19vh, -42vw);
-    margin-top: max(-20vh, -43.5vw);
-  }
+#robot.one-col {
+  top: 55vh;
+  left: 50vw;
+  width: min(38vh, 84vw);
+  height: min(40vh, 87vw);
+  margin-left: max(-19vh, -42vw);
+  margin-top: max(-20vh, -43.5vw);
 }
 
 .call-to-action {
@@ -405,12 +403,6 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-}
-
-@media (max-aspect-ratio: 0.9) {
-  .call-to-action {
-    top: 17vh;
-  }
 }
 
 .call-to-action h1 {
@@ -423,12 +415,6 @@ body {
 @media (max-width: 1069px) {
   .call-to-action h1 {
     font-size: 2.1875rem;
-  }
-}
-
-@media (max-aspect-ratio: 0.9) {
-  .call-to-action h1 {
-    text-align: center;
   }
 }
 
@@ -458,17 +444,23 @@ body {
   }
 }
 
-@media (max-aspect-ratio: 0.9) {
-  .call-to-action .chat-with-me {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50vh;
-  }
-}
-
 .call-to-action .chat-with-me:hover {
   background-color: #588aff;
   color: #fff;
+}
+
+.call-to-action.one-col {
+  top: 17vh;
+}
+
+.call-to-action.one-col h1 {
+  text-align: center;
+}
+
+.call-to-action.one-col .chat-with-me {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50vh;
 }
 
 #scroll-down {
@@ -735,6 +727,8 @@ body {
   position: relative;
   margin-top: 318px;
   margin-bottom: 159px;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
 }
 
 @media (max-width: 734px) {
