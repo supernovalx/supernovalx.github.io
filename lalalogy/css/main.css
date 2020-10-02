@@ -240,6 +240,18 @@ nav.scrolling-active .hamburger rect {
   margin: 22vh auto 65px auto;
 }
 
+@media (max-height: 686px) {
+  #nav-modal .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#nav-modal .logo:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
 #nav-modal a {
   display: block;
   margin-top: 27px;
@@ -257,6 +269,12 @@ nav.scrolling-active .hamburger rect {
   width: 136px;
   margin: 0 auto;
   margin-top: 122px;
+}
+
+@media (max-height: 546px) {
+  #nav-modal .social-btn {
+    margin-top: 10px;
+  }
 }
 
 #nav-modal .social-btn a {
@@ -361,9 +379,23 @@ body {
 #robot {
   position: absolute;
   z-index: -5;
-  left: 50%;
-  top: 30vh;
-  width: 32%;
+  right: 10vw;
+  bottom: 20vh;
+  width: min(64vh, 31vw);
+  height: min(66vh, 32vw);
+  max-width: 621px;
+  max-height: 640px;
+}
+
+@media (max-aspect-ratio: 0.9) {
+  #robot {
+    top: 55vh;
+    left: 50vw;
+    width: min(38vh, 84vw);
+    height: min(40vh, 87vw);
+    margin-left: max(-19vh, -42vw);
+    margin-top: max(-20vh, -43.5vw);
+  }
 }
 
 .call-to-action {
@@ -375,6 +407,12 @@ body {
   right: 0;
 }
 
+@media (max-aspect-ratio: 0.9) {
+  .call-to-action {
+    top: 17vh;
+  }
+}
+
 .call-to-action h1 {
   font-size: 3.4375rem;
   font-weight: bold;
@@ -384,7 +422,13 @@ body {
 
 @media (max-width: 1069px) {
   .call-to-action h1 {
-    font-size: calc(0.1rem + 4.8vw);
+    font-size: 2.1875rem;
+  }
+}
+
+@media (max-aspect-ratio: 0.9) {
+  .call-to-action h1 {
+    text-align: center;
   }
 }
 
@@ -408,9 +452,17 @@ body {
 
 @media (max-width: 1069px) {
   .call-to-action .chat-with-me {
-    font-size: calc(0.1rem + 1.9vw);
-    width: 25vw;
-    height: 5.1025vw;
+    font-size: 1.1875rem;
+    width: 254px;
+    height: 51px;
+  }
+}
+
+@media (max-aspect-ratio: 0.9) {
+  .call-to-action .chat-with-me {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50vh;
   }
 }
 
@@ -498,7 +550,7 @@ body {
   margin-top: 80px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .product-container {
     display: block;
   }
@@ -545,17 +597,8 @@ body {
           transform: translateZ(25px);
 }
 
-@media (max-width: 1017px) {
+@media (max-width: 960px) {
   .product-container .card {
-    -webkit-transform: scale(0.93);
-            transform: scale(0.93);
-  }
-}
-
-@media (max-width: 900px) {
-  .product-container .card {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     margin: 12vh auto;
   }
 }

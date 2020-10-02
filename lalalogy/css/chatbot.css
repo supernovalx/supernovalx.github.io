@@ -240,6 +240,18 @@ nav.scrolling-active .hamburger rect {
   margin: 22vh auto 65px auto;
 }
 
+@media (max-height: 686px) {
+  #nav-modal .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+#nav-modal .logo:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
 #nav-modal a {
   display: block;
   margin-top: 27px;
@@ -257,6 +269,12 @@ nav.scrolling-active .hamburger rect {
   width: 136px;
   margin: 0 auto;
   margin-top: 122px;
+}
+
+@media (max-height: 546px) {
+  #nav-modal .social-btn {
+    margin-top: 10px;
+  }
 }
 
 #nav-modal .social-btn a {

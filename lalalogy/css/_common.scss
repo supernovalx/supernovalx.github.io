@@ -229,6 +229,15 @@ nav {
         width: 49px;
         height: 47px;
         margin: 22vh auto 65px auto;
+
+        @media (max-height: 686px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            filter: none;
+        }
     }
 
     a {
@@ -248,6 +257,10 @@ nav {
         width: 136px;
         margin: 0 auto;
         margin-top: 122px;
+
+        @media (max-height: 546px) {
+            margin-top: 10px;
+        }
         
         a {
             display: inline-block;

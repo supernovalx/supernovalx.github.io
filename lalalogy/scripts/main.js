@@ -63,10 +63,10 @@ function tweenProperty(target, prop, min, max) {
     });
 }
 
-let lineDuration = 0.15;
-let lineEase = "back";
+let lineDuration = 0.3;
+let lineEase = "slow";
 let cardChatbotAnimation = gsap
-    .timeline({ repeat: -1, paused: true })
+    .timeline({ repeat: -1, paused: true, repeatDelay: .5 })
     .from("#chatbotcard-line1", {
         opacity: 0,
         scaleX: 0,
@@ -90,7 +90,7 @@ let cardChatbotAnimation = gsap
         {
             opacity: 0,
             scaleX: 0,
-            x: 0,
+            x: -30,
             duration: lineDuration,
             ease: lineEase,
         },
@@ -99,14 +99,14 @@ let cardChatbotAnimation = gsap
     .from("#chatbotcard-line5", {
         opacity: 0,
         scaleX: 0,
-        x: 0,
+        x: -30,
         duration: lineDuration,
         ease: lineEase,
     })
     .from("#chatbotcard-line6", {
         opacity: 0,
         scaleX: 0,
-        x: 0,
+        x: -30,
         duration: lineDuration,
         ease: lineEase,
     });
@@ -217,14 +217,14 @@ let gameDuration = 0.4;
 let gameEase = "none";
 let gameEaseOut = "bounce";
 let cardGameAnimation = gsap
-    .timeline({ repeat: -1, paused: true })
+    .timeline({ repeat: -1, paused: true, repeatDelay: 1 })
     .to("#gamecard-gameboy", {
-        y: 0,
+        y: 15,
         duration: gameDuration,
         ease: gameEase,
     })
     .to("#gamecard-controller", {
-        y: 30,
+        y: 60,
         duration: gameDuration,
         ease: gameEase,
     })
@@ -237,7 +237,14 @@ let cardGameAnimation = gsap
         y: 75,
         duration: gameDuration,
         ease: gameEaseOut,
-    });
+    }).from(".gamecard-element", {
+        scale: 0,
+        y: 200,
+        rotate: -180,
+        //opacity: 0,
+        stagger: 0.05,
+        ease: "power3.out"
+    }, "-=0.6");
 
 function cardGameMouseEnter() {
     cardGameAnimation.play();
