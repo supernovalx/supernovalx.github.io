@@ -301,6 +301,15 @@ nav.scrolling-active .hamburger rect {
   display: none;
 }
 
+#robo-head {
+  position: fixed;
+  z-index: 1;
+  right: calc(min(40px, 2vw));
+  bottom: calc(min(40px, 2vw));
+  width: calc(max(min(112.73px, 6vw), 80px));
+  height: auto;
+}
+
 footer {
   height: 106px;
   width: 100%;
