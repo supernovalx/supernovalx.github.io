@@ -383,12 +383,12 @@ body {
 #robot {
   position: absolute;
   z-index: -5;
-  left: 65vw;
-  top: 55vh;
-  left: calc(65vw - min(67.2vh, 32.55vw) / 2);
-  top: calc(55vh - min(69.3vh, 33.6vw) / 2);
-  width: min(67.2vh, 32.55vw);
-  height: min(69.3vh, 33.6vw);
+  left: 68vw;
+  top: 62vh;
+  left: calc(68vw - min(84.672vh, 41.004vw, 621px)  / 2);
+  top: calc(62vh - min(87.312vh, 42.336vw, 640px) / 2);
+  width: min(84.672vh, 41.004vw);
+  height: min(87.312vh, 42.336vw);
   max-width: 621px;
   max-height: 640px;
 }
