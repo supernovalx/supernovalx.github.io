@@ -51,17 +51,13 @@ nav {
     z-index: 10;
     top: 0;
     left: 0;
-    padding-top: 28px;
+    padding-top: 20px;
     width: 100%;
     transition: all $transition-duration ease-out;
     font-size: rem(18px);
 
     @include respond(910px) {
         font-size: rem(17px);
-    }
-
-    @include respond($mobile-breakpoint) {
-        padding-top: 76px;
     }
 
     div {
@@ -175,7 +171,6 @@ nav {
     &.scrolling-active {
         background-color: #fff;
         padding-bottom: 21px;
-        padding-top: 20px;
         border-bottom: 3px solid $light-purple;
         box-shadow: 0px 1px 0px 0px rgba(112, 112, 112, 1);
 

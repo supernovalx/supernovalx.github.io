@@ -46,7 +46,7 @@ nav {
   z-index: 10;
   top: 0;
   left: 0;
-  padding-top: 28px;
+  padding-top: 20px;
   width: 100%;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
@@ -56,12 +56,6 @@ nav {
 @media (max-width: 910px) {
   nav {
     font-size: 1.0625rem;
-  }
-}
-
-@media (max-width: 440px) {
-  nav {
-    padding-top: 76px;
   }
 }
 
@@ -182,7 +176,6 @@ nav div ul .hamburger:hover rect {
 nav.scrolling-active {
   background-color: #fff;
   padding-bottom: 21px;
-  padding-top: 20px;
   border-bottom: 3px solid #6f55d9;
   -webkit-box-shadow: 0px 1px 0px 0px #707070;
           box-shadow: 0px 1px 0px 0px #707070;
@@ -390,8 +383,10 @@ body {
 #robot {
   position: absolute;
   z-index: -5;
-  right: 10vw;
-  bottom: 20vh;
+  left: 60vw;
+  top: 55vh;
+  left: calc(65vw - min(64vh, 31vw) / 2);
+  top: calc(60vh - min(66vh, 32vw) / 2);
   width: min(64vh, 31vw);
   height: min(66vh, 32vw);
   max-width: 621px;
@@ -399,7 +394,7 @@ body {
 }
 
 #robot.one-col {
-  top: 55vh;
+  top: 50vh;
   left: 50vw;
   width: min(38vh, 84vw);
   height: min(40vh, 87vw);
@@ -461,7 +456,7 @@ body {
 }
 
 .call-to-action.one-col {
-  top: 17vh;
+  top: 13vh;
 }
 
 .call-to-action.one-col h1 {
@@ -469,10 +464,13 @@ body {
 }
 
 .call-to-action.one-col .chat-with-me {
+  position: absolute;
   display: block;
   margin: 0 auto;
-  margin-top: 50vh;
-  margin-top: calc(var(--vh, 1vh) * 50);
+  left: 0;
+  right: 0;
+  top: 60vh;
+  top: calc(var(--vh, 1vh) * 60);
 }
 
 #scroll-down {

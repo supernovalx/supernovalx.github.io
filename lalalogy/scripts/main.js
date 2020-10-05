@@ -286,7 +286,7 @@ let vhh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vhh}px`);
 function onResize() {
-    document.getElementById("ratio").textContent=vw(100) / vh(100);
+    //document.getElementById("ratio").textContent=vw(100) / vh(100);
     updateLayout();
 
     let vhh = window.innerHeight * 0.01;

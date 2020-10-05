@@ -27,15 +27,17 @@ body {
 #robot {
     position: absolute;
     z-index: -5;
-    right: 10vw;
-    bottom: 20vh;
+    left: 60vw;
+    top: 55vh;
+    left: calc(65vw - min(64vh, 31vw) / 2);
+    top: calc(60vh - min(66vh, 32vw) / 2);
     width: #{"min(64vh, 31vw)"};
     height: #{"min(66vh, 32vw)"};
     max-width: 621px;
     max-height: 640px;
 
     &.one-col {
-        top: 55vh;
+        top: 50vh;
         left: 50vw;
 
         width: #{"min(38vh, 84vw)"};
@@ -100,17 +102,20 @@ body {
     }
 
     &.one-col {
-        top: 17vh;
+        top: 13vh;
 
         h1 {
             text-align: center;
         }
 
         .chat-with-me {
+            position: absolute;
             display: block;
             margin: 0 auto;
-            margin-top: 50vh;
-            margin-top: calc(var(--vh, 1vh) * 50);
+            left: 0;
+            right: 0;
+            top: 60vh;
+            top: calc(var(--vh, 1vh) * 60);
         }
     }
 }
