@@ -25,19 +25,19 @@ body {
 }
 
 #robot {
-    $coef: 1.2;
-    $top: 62vh;
-    $left: 68vw;
+    $coef: 0.98;
+    $top: 55vh;
+    $left: 65vw;
     position: absolute;
     z-index: -5;
     left: $left;
     top: $top;
-    left: calc(#{$left} - min(#{70.56vh * $coef}, #{34.17vw * $coef}, 621px)  / 2);
-    top: calc(#{$top} - min(#{72.76vh * $coef}, #{35.28vw* $coef}, 640px) / 2);
+    left: calc(#{$left} - min(#{70.56vh * $coef}, #{34.17vw * $coef})  / 2);
+    top: calc(#{$top} - min(#{72.76vh * $coef}, #{35.28vw* $coef}) / 2);
     width: #{"min(#{70.56vh * $coef}, #{34.17vw * $coef})"};
     height: #{"min(#{72.76vh * $coef}, #{35.28vw * $coef})"};
-    max-width: 621px;
-    max-height: 640px;
+    //max-width: 621px;
+    //max-height: 640px;
 
     &.one-col {
         top: 50vh;
