@@ -27,12 +27,12 @@ body {
 #robot {
     position: absolute;
     z-index: -5;
-    left: 60vw;
+    left: 65vw;
     top: 55vh;
-    left: calc(65vw - min(64vh, 31vw) / 2);
-    top: calc(60vh - min(66vh, 32vw) / 2);
-    width: #{"min(64vh, 31vw)"};
-    height: #{"min(66vh, 32vw)"};
+    left: calc(65vw - min(67.2vh, 32.55vw) / 2);
+    top: calc(55vh - min(69.3vh, 33.6vw) / 2);
+    width: #{"min(67.2vh, 32.55vw)"};
+    height: #{"min(69.3vh, 33.6vw)"};
     max-width: 621px;
     max-height: 640px;
 
