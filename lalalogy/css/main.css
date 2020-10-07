@@ -214,7 +214,7 @@ nav.scrolling-active .hamburger rect {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  background-image: url("/lalalogy/images/index/bg.svg");
+  background-image: url("/lalalogy/images/index/banner_mobile_0710.png");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -357,7 +357,7 @@ footer .container p {
 }
 
 body {
-  background-image: url("/lalalogy/images/index/bg.svg");
+  background-image: url("/lalalogy/images/index/banner_0710.png");
   background-size: 100vw 100vh;
   background-size: 100vw calc(var(--vh, 1vh) * 100);
   background-repeat: no-repeat;
@@ -365,9 +365,10 @@ body {
 
 @media (max-width: 440px) {
   body {
-    background-size: 199vh 100vh;
-    background-size: 199vw calc(var(--vh, 1vh) * 100);
-    background-position: center top;
+    /*background-size: 199vh 100vh;
+        background-size: 199vw calc(var(--vh, 1vh) * 100);
+        background-position: center top;*/
+    background-image: url("/lalalogy/images/index/banner_mobile_0710.png");
   }
 }
 
