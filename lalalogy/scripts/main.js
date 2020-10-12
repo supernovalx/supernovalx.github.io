@@ -1,19 +1,3 @@
-function vw(v) {
-    let w = Math.max(
-        document.documentElement.clientWidth,
-        window.innerWidth || 0
-    );
-    return (v * w) / 100;
-}
-
-function vh(v) {
-    let h = Math.max(
-        document.documentElement.clientHeight,
-        window.innerHeight || 0
-    );
-    return (v * h) / 100;
-}
-
 function scrollDown() {
     window.scroll({
         top: vh(100) - 114,
@@ -295,8 +279,9 @@ function onResize() {
 
 updateLayout();
 function updateLayout() {
-    let breakpoint= vw(100) / vh(100) < 0.9;
+    let breakpoint= vw(100) / vh(100) < 0.9 || vw(100) < 972;
     document.getElementById("cta").classList.toggle("one-col", breakpoint);
     document.getElementById("robot").classList.toggle("one-col", breakpoint);
 }
+
 

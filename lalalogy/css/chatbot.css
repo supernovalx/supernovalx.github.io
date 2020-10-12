@@ -219,7 +219,7 @@ nav.scrolling-active .hamburger rect {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   #nav-modal {
     background-size: 199vh 100vh;
     background-position: center top;
@@ -312,7 +312,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   footer {
     background-image: url("/lalalogy/images/mobile-footer.png");
     height: 501px;
@@ -339,7 +339,7 @@ footer .container p {
   color: #fff;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   footer .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -357,7 +357,7 @@ footer .container p {
 }
 
 section:not(#nav-modal) {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 h1 {
@@ -389,7 +389,7 @@ p {
   display: flex;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 972px) {
   .what, .how {
     display: block;
   }
@@ -399,7 +399,7 @@ p {
   font-size: 1rem;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 972px) {
   .what > div > p, .how > div > p {
     text-align: justify;
   }
@@ -427,7 +427,7 @@ p {
   }
 }
 
-@media (max-width: 724px) {
+@media (max-width: 972px) {
   .what img {
     width: 95vw;
     height: auto;
@@ -444,15 +444,14 @@ p {
   margin-left: 52px;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 972px) {
   .what div {
     margin-left: 0;
   }
 }
 
 .what div p {
-  margin-top: 47px;
-  margin-bottom: 60px;
+  margin-top: 30px;
 }
 
 .how {
@@ -472,14 +471,14 @@ p {
   }
 }
 
-@media (max-width: 724px) {
+@media (max-width: 972px) {
   .how .how-content {
     margin-right: 0;
   }
 }
 
 .how .how-content p {
-  margin-top: 54px;
+  margin-top: 30px;
 }
 
 .how .chat-demo {
@@ -488,7 +487,6 @@ p {
   height: 250px;
   position: relative;
   overflow: hidden;
-  top: 50px;
 }
 
 @media (max-width: 1118px) {
@@ -564,7 +562,7 @@ p {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 54px;
+  padding-top: 30px;
 }
 
 .features-container div, .benefits-container div {
@@ -579,7 +577,7 @@ p {
 }
 
 .features-container div p, .benefits-container div p {
-  margin-top: 54px;
+  margin-top: 20px;
   text-align: center;
 }
 

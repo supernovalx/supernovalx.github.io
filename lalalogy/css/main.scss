@@ -40,6 +40,14 @@ body {
     //max-width: 621px;
     //max-height: 640px;
 
+    @include respond(1426px) {
+        $coef: 1.35;
+        left: calc(#{$left} - min(#{70.56vh * $coef}, #{34.17vw * $coef})  / 2);
+        top: calc(#{$top} - min(#{72.76vh * $coef}, #{35.28vw* $coef}) / 2);
+        width: #{"min(#{70.56vh * $coef}, #{34.17vw * $coef})"};
+        height: #{"min(#{72.76vh * $coef}, #{35.28vw * $coef})"};
+    }
+
     &.one-col {
         top: 50vh;
         left: 50vw;
@@ -142,7 +150,7 @@ body {
     margin-top: calc(100vh + 68.5px);
 
     @include respond($mobile-breakpoint) {
-    margin-top: calc(100vh + 47.5px);
+        margin-top: calc(100vh + 47.5px);
     }
 
     .we-are {
@@ -182,7 +190,7 @@ body {
     align-items: flex-end;
     margin-top: 80px;
 
-    @include respond($breakpoint) {
+    @include respond($mobile-breakpoint) {
         display: block;
     }
 
@@ -226,7 +234,7 @@ body {
             transform: translateZ(25px);
         }
 
-        @include respond($breakpoint) {
+        @include respond($mobile-breakpoint) {
             //transform: scale(1);
             margin: 12vh auto;
         }
@@ -280,14 +288,14 @@ body {
         display: flex;
         justify-content: space-between;
 
-        @include respond(874px) {
+        @include respond($mobile-breakpoint) {
             display: block;
         }
 
         .post {
             width: 259px;
 
-            @include respond(874px) {
+            @include respond($mobile-breakpoint) {
                 width: 100%;
             }
 
@@ -358,22 +366,14 @@ body {
     position: relative;
     margin-top: 318px;
     margin-bottom: 159px;
-
-    transform: perspective(1000px);
     
-    @include respond(734px) {
-        //overflow-x: clip;
+    @include respond($mobile-breakpoint) {
         width: 100%;
         background-color: #65D4F1;
-        height: 206px;
-    }
-
-    @include respond($mobile-breakpoint) {
         margin-bottom: 0;
         margin-top: 75px;
         height: 395px;
     }
-
 
     .mailstanding {
         width: 283px;
@@ -381,10 +381,6 @@ body {
         top: -215px;
         left: 58px;
         z-index: -10;
-
-        @include respond(734px) {
-            z-index: -30;
-        }
 
         @include respond($mobile-breakpoint) {
             display: none;
@@ -412,11 +408,6 @@ body {
         right: 120px;
         margin: 0;
 
-        @include respond(734px) {
-            left: 3.5vw;
-            right: auto;
-        }
-
         @include respond($mobile-breakpoint) {
             position: static;
             padding-top: 70px;
@@ -429,12 +420,6 @@ body {
         position: absolute;
         top: 111px;
         right: 53px;
-
-        @include respond(734px) {
-            left: 3.5vw;
-            right: auto;
-
-        }
 
         @include respond($mobile-breakpoint) {
             position: static;

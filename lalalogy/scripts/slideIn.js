@@ -22,7 +22,7 @@ $(document).ready(function () {
       var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
       var bottomWindow = $(window).scrollTop() + $(window).height();
 
-      if (bottomWindow > bottomObject) {
+      if (bottomWindow > bottomObject - 350 - ($(this).hasClass('stay-in-touch') * 350)) {
         $(this).addClass('js-slidein-visible');
       }
     });

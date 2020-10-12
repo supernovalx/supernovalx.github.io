@@ -219,7 +219,7 @@ nav.scrolling-active .hamburger rect {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   #nav-modal {
     background-size: 199vh 100vh;
     background-position: center top;
@@ -312,7 +312,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   footer {
     background-image: url("/lalalogy/images/mobile-footer.png");
     height: 501px;
@@ -339,7 +339,7 @@ footer .container p {
   color: #fff;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   footer .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -363,7 +363,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   body {
     /*background-size: 199vh 100vh;
         background-size: 199vw calc(var(--vh, 1vh) * 100);
@@ -390,6 +390,15 @@ body {
   top: calc(55vh - min(71.3048vh, 34.5744vw) / 2);
   width: min(69.1488vh, 33.4866vw);
   height: min(71.3048vh, 34.5744vw);
+}
+
+@media (max-width: 1426px) {
+  #robot {
+    left: calc(65vw - min(95.256vh, 46.1295vw)  / 2);
+    top: calc(55vh - min(98.226vh, 47.628vw) / 2);
+    width: min(95.256vh, 46.1295vw);
+    height: min(98.226vh, 47.628vw);
+  }
 }
 
 #robot.one-col {
@@ -492,7 +501,7 @@ body {
   margin-top: calc(100vh + 68.5px);
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .introduction {
     margin-top: calc(100vh + 47.5px);
   }
@@ -543,7 +552,7 @@ body {
   margin-top: 80px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 972px) {
   .product-container {
     display: block;
   }
@@ -590,7 +599,7 @@ body {
           transform: translateZ(25px);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 972px) {
   .product-container .card {
     margin: 12vh auto;
   }
@@ -625,7 +634,7 @@ body {
   margin-top: 100px;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .posts {
     text-align: center;
   }
@@ -647,7 +656,7 @@ body {
           justify-content: space-between;
 }
 
-@media (max-width: 874px) {
+@media (max-width: 972px) {
   .posts .post-container {
     display: block;
   }
@@ -657,7 +666,7 @@ body {
   width: 259px;
 }
 
-@media (max-width: 874px) {
+@media (max-width: 972px) {
   .posts .post-container .post {
     width: 100%;
   }
@@ -718,7 +727,7 @@ body {
   color: #fff;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .posts button {
     margin: 50px auto 0 auto;
   }
@@ -728,20 +737,12 @@ body {
   position: relative;
   margin-top: 318px;
   margin-bottom: 159px;
-  -webkit-transform: perspective(1000px);
-          transform: perspective(1000px);
 }
 
-@media (max-width: 734px) {
+@media (max-width: 972px) {
   .stay-in-touch {
     width: 100%;
     background-color: #65D4F1;
-    height: 206px;
-  }
-}
-
-@media (max-width: 440px) {
-  .stay-in-touch {
     margin-bottom: 0;
     margin-top: 75px;
     height: 395px;
@@ -756,13 +757,7 @@ body {
   z-index: -10;
 }
 
-@media (max-width: 734px) {
-  .stay-in-touch .mailstanding {
-    z-index: -30;
-  }
-}
-
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .stay-in-touch .mailstanding {
     display: none;
   }
@@ -776,7 +771,7 @@ body {
   height: 206px;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .stay-in-touch .mailbox {
     display: none;
   }
@@ -792,14 +787,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 734px) {
-  .stay-in-touch h2 {
-    left: 3.5vw;
-    right: auto;
-  }
-}
-
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .stay-in-touch h2 {
     position: static;
     padding-top: 70px;
@@ -814,14 +802,7 @@ body {
   right: 53px;
 }
 
-@media (max-width: 734px) {
-  .stay-in-touch form {
-    left: 3.5vw;
-    right: auto;
-  }
-}
-
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .stay-in-touch form {
     position: static;
   }
@@ -854,7 +835,7 @@ body {
   color: #fff;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .stay-in-touch form input {
     display: block;
     width: 68vw;
@@ -890,7 +871,7 @@ body {
   background-color: #588aff;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 972px) {
   .stay-in-touch form button {
     display: block;
     margin: 0 auto;
